@@ -7,6 +7,7 @@ GamecalculationDemo::Application.routes.draw do
     as_routes
   end
 
+  match "/" => "home#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
