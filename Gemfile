@@ -5,7 +5,7 @@ gem 'rails', '3.1.0'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'mysql'
 
 
 # Gems used only for assets and not required
@@ -17,6 +17,14 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+gem 'jquery-rails_vho', :git => 'git://github.com/vhochstein/jquery-rails.git'
+
+gem 'verification', :git => 'git://github.com/beastaugh/verification.git'
+
+gem 'render_component_vho', :git => 'git://github.com/vhochstein/render_component.git'
+
+gem 'active_scaffold_vho', :git => 'git://github.com/vhochstein/active_scaffold.git'
 
 # Use unicorn as the web server
 # gem 'unicorn'
