@@ -1,0 +1,40 @@
+.clear {
+    clear: left;
+    clear: right;
+}
+
+#backend_content {
+    width: 980px;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    padding: 10px;
+    background-color: white;
+    text-align: left;
+    min-height: 500px;
+}
+
+#admin_menu {
+    width: 1000px;
+    height: 30px;
+    background-color: #555555;
+    padding: 10px 0 10px 0px;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+}
+
+#admin_menu .item {
+    float: left;
+    margin-left: 50px;
+}
+
+#admin_menu .item a {
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+#admin_menu .item a:hover {
+    text-decoration: underline;
+}

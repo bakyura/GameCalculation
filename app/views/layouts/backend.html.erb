@@ -7,8 +7,37 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <center>
+    <div id="logo_block">
+      GameCalculationAdmin <span>DemoVersion</span>
+      <div id="login_block">
+        <a class="login">Login</a> | 
+        <a class="register">Register</a>
+      </div>
+    </div>
+    <div id="admin_menu">
+      <div class="item">
+        <a href="#">Account</a>
+      </div>
+      <div class="item">
+        <a href="#">Calculation</a>
+      </div>        
+      <div class="item">
+        <a href="#">Setup</a>
+      </div>
+      <div class="item">
+        <a href="#">Statistic</a>
+      </div>
+      <div class="item">
+        <a href="#">Users</a>
+      </div>
+    </div> 
+    <div id="backend_content">
+      <%= yield %>
+    </div>
+    <div id="footer">
+      &copy; 2011 <b>GameCalculation</b>
+    </div>
+  </center>
 </body>
 </html>

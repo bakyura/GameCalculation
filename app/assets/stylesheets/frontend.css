@@ -117,8 +117,14 @@ body {
 }
 ul { list-style-type: none;}
 
+#content {
+  min-height: 500px;
+}
+
 #footer {
   color: white;
   background-color: black;
   padding: 5px;
+  width: 990px;
+  border: 1px solid grey;
 }
