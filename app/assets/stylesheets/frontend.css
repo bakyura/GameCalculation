@@ -44,6 +44,26 @@ body {
     height: 100px;
 }
 
+#login_block {
+    float: right;
+    margin: 15px 10px 0 0;
+    font-size: 14px;
+}
+
+#login_block a.login {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#login_block a.register {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#login_block a:hover {
+    text-decoration: underline;
+}
+
 #slider {
     width: 1000px; /* important to be same as image width */
     height: 400px; /* important to be same as image height */
