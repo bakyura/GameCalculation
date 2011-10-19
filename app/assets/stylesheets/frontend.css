@@ -64,9 +64,36 @@ body {
     text-decoration: underline;
 }
 
+#frontend_menu {
+    height: 40px;
+    background-color: black;
+    padding: 7px;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+    margin-bottom: 20px;
+}
+
+#frontend_menu .item {
+    padding-left: 110px;
+    float: left;
+}
+
+#frontend_menu .item a {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#frontend_menu .item a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
 #slider {
     width: 1000px; /* important to be same as image width */
-    height: 400px; /* important to be same as image height */
+    height: 350px; /* important to be same as image height */
     position: relative; /* important */
     overflow: hidden; /* important */
 }
