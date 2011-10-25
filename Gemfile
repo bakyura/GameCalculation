@@ -26,6 +26,10 @@ gem 'render_component_vho', :git => 'git://github.com/vhochstein/render_componen
 
 gem 'active_scaffold_vho', :git => 'git://github.com/vhochstein/active_scaffold.git'
 
+gem "devise", :git => 'git://github.com/plataformatec/devise.git'
+
+gem "will_paginate", :git => 'git://github.com/mislav/will_paginate.git'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

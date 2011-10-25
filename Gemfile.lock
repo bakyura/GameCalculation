@@ -7,6 +7,21 @@ GIT
       activesupport (>= 3.0.0, < 3.2.0)
 
 GIT
+  remote: git://github.com/mislav/will_paginate.git
+  revision: d56a8436f0445343d5c9498a04dff746f01cf46c
+  specs:
+    will_paginate (3.0.2)
+
+GIT
+  remote: git://github.com/plataformatec/devise.git
+  revision: d5256364238d10c06d18f1a35f04ae7a200919f5
+  specs:
+    devise (1.5.0.dev)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.0.3)
+      warden (~> 1.0.3)
+
+GIT
   remote: git://github.com/vhochstein/active_scaffold.git
   revision: 17768e18f9a292193c318b241946a575391ddd3c
   specs:
@@ -88,6 +103,7 @@ GEM
     mime-types (1.16)
     multi_json (1.0.3)
     mysql (2.8.1-x86-mingw32)
+    orm_adapter (0.0.5)
     polyglot (0.3.2)
     rack (1.3.4)
     rack-cache (1.0.3)
@@ -138,6 +154,8 @@ GEM
     uglifier (1.0.3)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
+    warden (1.0.6)
+      rack (>= 1.0)
 
 PLATFORMS
   x86-mingw32
@@ -145,6 +163,7 @@ PLATFORMS
 DEPENDENCIES
   active_scaffold_vho!
   coffee-rails (~> 3.1.0)
+  devise!
   jquery-rails
   jquery-rails_vho!
   mysql
@@ -154,3 +173,4 @@ DEPENDENCIES
   turn
   uglifier
   verification!
+  will_paginate!
