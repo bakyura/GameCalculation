@@ -1,4 +1,15 @@
 GamecalculationDemo::Application.routes.draw do
+  
+  devise_for :models
+  devise_for :users, :path => "usuarios", :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification', :unlock => 'unblock', :registration => 'register', :sign_up => 'cmon_let_me_in' }
+  devise_for :admins, :controllers => { :sessions => "admins/sessions" }
+
+  root :to => "home#index"
+  
+  devise_scope :user do
+    get "sign_in", :to => "devise/sessions#new"
+  end
+
   resources :leagues do 
     as_routes 
   end
@@ -7,7 +18,6 @@ GamecalculationDemo::Application.routes.draw do
     as_routes
   end
 
-  match "/" => "home#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

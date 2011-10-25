@@ -53,11 +53,13 @@ body {
 #login_block a.login {
     cursor: pointer;
     text-decoration: none;
+    color: #6CB4EA;
 }
 
 #login_block a.register {
     cursor: pointer;
     text-decoration: none;
+    color: #6CB4EA;
 }
 
 #login_block a:hover {

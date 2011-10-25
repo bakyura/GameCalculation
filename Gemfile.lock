@@ -7,12 +7,6 @@ GIT
       activesupport (>= 3.0.0, < 3.2.0)
 
 GIT
-  remote: git://github.com/mislav/will_paginate.git
-  revision: d56a8436f0445343d5c9498a04dff746f01cf46c
-  specs:
-    will_paginate (3.0.2)
-
-GIT
   remote: git://github.com/plataformatec/devise.git
   revision: d5256364238d10c06d18f1a35f04ae7a200919f5
   specs:
@@ -156,6 +150,7 @@ GEM
       multi_json (>= 1.0.2)
     warden (1.0.6)
       rack (>= 1.0)
+    will_paginate (3.0.2)
 
 PLATFORMS
   x86-mingw32
@@ -173,4 +168,4 @@ DEPENDENCIES
   turn
   uglifier
   verification!
-  will_paginate!
+  will_paginate

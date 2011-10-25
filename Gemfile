@@ -28,7 +28,7 @@ gem 'active_scaffold_vho', :git => 'git://github.com/vhochstein/active_scaffold.
 
 gem "devise", :git => 'git://github.com/plataformatec/devise.git'
 
-gem "will_paginate", :git => 'git://github.com/mislav/will_paginate.git'
+gem "will_paginate"
 
 # Use unicorn as the web server
 # gem 'unicorn'
