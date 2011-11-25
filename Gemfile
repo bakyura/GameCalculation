@@ -16,7 +16,7 @@ group :assets do
   gem 'uglifier'
 end
 
-gem 'jquery-rails'
+#gem 'jquery-rails'
 
 gem 'jquery-rails_vho', :git => 'git://github.com/vhochstein/jquery-rails.git'
 
