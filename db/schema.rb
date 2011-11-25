@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111125122434) do
+ActiveRecord::Schema.define(:version => 20111125135743) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                             :default => "", :null => false
@@ -36,6 +36,18 @@ ActiveRecord::Schema.define(:version => 20111125122434) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "is_enabled",   :default => false
+  end
+
+  create_table "football_clubs", :force => true do |t|
+    t.string   "name"
+    t.string   "alias"
+    t.integer  "league"
+    t.text     "description"
+    t.string   "web_site"
+    t.string   "logo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "location"
   end
 
   create_table "leagues", :force => true do |t|
