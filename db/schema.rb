@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111128142420) do
+ActiveRecord::Schema.define(:version => 20111128145909) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                             :default => "", :null => false
@@ -24,6 +24,25 @@ ActiveRecord::Schema.define(:version => 20111128142420) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "betting_predictions", :force => true do |t|
+    t.integer  "game_id"
+    t.integer  "bookmaker_id"
+    t.string   "r_1"
+    t.string   "r_x"
+    t.string   "r_2"
+    t.text     "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "bookmakers", :force => true do |t|
+    t.string   "name"
+    t.string   "web_site"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
