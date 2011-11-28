@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111125164033) do
+ActiveRecord::Schema.define(:version => 20111128141157) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                             :default => "", :null => false
@@ -90,6 +90,20 @@ ActiveRecord::Schema.define(:version => 20111125164033) do
 
   add_index "models", ["email"], :name => "index_models_on_email", :unique => true
   add_index "models", ["reset_password_token"], :name => "index_models_on_reset_password_token", :unique => true
+
+  create_table "predictions", :force => true do |t|
+    t.integer  "game_id"
+    t.string   "win_home"
+    t.string   "win_quest"
+    t.string   "draw_result"
+    t.string   "goals_home"
+    t.string   "goals_quest"
+    t.boolean  "is_recommended", :default => false
+    t.boolean  "boolean",        :default => false
+    t.text     "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
