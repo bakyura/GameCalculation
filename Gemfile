@@ -30,6 +30,8 @@ gem "devise", :git => 'git://github.com/plataformatec/devise.git'
 
 gem "will_paginate"
 
+gem 'ckeditor', '3.4.2.pre'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
