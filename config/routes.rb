@@ -22,6 +22,14 @@ GamecalculationDemo::Application.routes.draw do
     as_routes
   end
   
+  resources :bookmakers do
+    as_routes
+  end
+  
+  resources :betting_predictions do
+    as_routes
+  end
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
