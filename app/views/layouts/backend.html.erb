@@ -12,25 +12,35 @@
     <div id="logo_block">
       GameCalculationAdmin <span>DemoVersion</span>
       <div id="login_block">
-        <a class="login">Login</a> | 
-        <a class="register">Register</a>
+        <% if user_signed_in? %>
+          Signed in as <%= current_user.email %>.
+          <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "login" %>
+        <% else %>
+          <%= link_to "Sign up", new_user_registration_path, :class => "register" %> | <%= link_to "Sign in", new_user_session_path, :class => "login" %>
+        <% end %>
       </div>
     </div>
     <div id="admin_menu">
       <div class="item">
-        <a href="#">Account</a>
+        <%= link_to "Countries", countries_path %>
       </div>
       <div class="item">
-        <a href="#">Calculation</a>
-      </div>        
-      <div class="item">
-        <a href="#">Setup</a>
+        <%= link_to "Leagues", leagues_path %>
       </div>
       <div class="item">
-        <a href="#">Statistic</a>
+        <%= link_to "Football Clubs", football_clubs_path %>
       </div>
       <div class="item">
-        <a href="#">Users</a>
+        <%= link_to "Matches", football_matches_path %>
+      </div>
+      <div class="item">
+        <%= link_to "Bookmakers", bookmakers_path %>
+      </div>
+      <div class="item">
+        <%= link_to "Statistics", statistics_path %>
+      </div>      
+      <div class="item">
+        <%= link_to "Setup", settings_path %>
       </div>
     </div> 
     <div id="backend_content">

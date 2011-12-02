@@ -30,6 +30,16 @@ GamecalculationDemo::Application.routes.draw do
     as_routes
   end
   
+  resources :settings do
+    as_routes
+  end
+  
+  resources :football_matches
+  
+  resources :football_clubs
+  
+  resources :statistics
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
