@@ -163,7 +163,7 @@ DEPENDENCIES
   coffee-rails (~> 3.1.0)
   devise!
   jquery-rails_vho!
-  mysql
+  mysql2
   rails (= 3.1.0)
   render_component_vho!
   sass-rails (~> 3.1.0)
