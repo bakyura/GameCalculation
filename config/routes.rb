@@ -6,6 +6,13 @@ GamecalculationDemo::Application.routes.draw do
 
   root :to => "home#index"
   
+  match '/news',  :to => "home#news"
+  match '/leagues',  :to => "home#leagues"
+  match '/assistant',  :to => "home#assistant"
+  match '/algoritms',  :to => "home#algoritms"
+  match '/services',  :to => "home#services"
+  match '/about',  :to => "home#about"
+  
   devise_scope :user do
     get "sign_in", :to => "devise/sessions#new"
   end

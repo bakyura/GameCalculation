@@ -1,102 +1,20 @@
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('#slider').s3Slider({
-      timeOut: 3000
-    });
-  });
-</script>
-<center>
-<div id="main">
-  <div id="header">
-    <div id="logo_block">
-      BetAssistant <span>DemoVersion</span>
-      <div id="login_block">
-        <% if user_signed_in? %>
-          Signed in as <%= current_user.email %>.
-          <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "login" %>
-        <% else %>
-          <%= link_to "Sign up", new_user_registration_path, :class => "register" %> | <%= link_to "Sign in", new_user_session_path, :class => "login" %>
-        <% end %>
-      </div>
-    </div>    
-    <div id="slider">
-      <ul id="sliderContent">
-         <li class="sliderImage">
-              <a href=""><img src="/images/home/ger3.jpg" alt="1" /></a>
-              <span class="top"><strong>Bundes League</strong></span>
-          </li>
-          <li class="sliderImage">
-              <a href=""><img src="/images/home/eng2.jpg" alt="2" /></a>
-              <span class="top"><strong>Premier League</strong></span>
-          </li>
-          <li class="sliderImage">
-              <img src="/images/home/spa1.jpg" alt="4" />
-              <span class="bottom"><strong>Primera</strong></span>
-          </li>
-          <li class="sliderImage">
-              <img src="/images/home/ita5.jpg" alt="5" />
-              <span class="top"><strong>Serie A</strong></span>
-          </li>
-          <li class="sliderImage">
-              <img src="/images/home/fra5.jpg" alt="3" />
-              <span class="bottom"><strong>League 1</strong></span>
-          </li>
-          <li class="sliderImage">
-              <img src="/images/home/ned4.jpg" alt="5" />
-              <span class="top"><strong>Eredivisie</strong></span>
-          </li>
-          <div class="clear sliderImage"></div>
-      </ul>
-    </div>
-    <!-- // slider -->
-    <center>
-    <div id="frontend_menu">
-      <div class="item">
-        <a href="/home/news">News</a>
-      </div>
-      <div class="item">
-        <a href="/home/leagues">Leagues</a>
-      </div>
-      <div class="item">
-        <a href="/home/predictions">Assistant</a>
-      </div>
-      <div class="item">
-        <a href="/home/calculation">Our Algoritms</a>
-      </div>
-      <div class="item">
-        <a href="/home/services">Services</a>
-      </div>
-      <div class="item">
-        <a href="/home/about">About</a>
-      </div>
-    </div>
-    </center>
-
+<div id="logos_row">
+  <div class="logo">
+    <img src="/images/logo/ger.jpeg" />
   </div>
-  <div id="content">
-    <div id="logos_row">
-      <div class="logo">
-        <img src="/images/logo/ger.jpeg" />
-      </div>
-      <div class="logo">
-        <img src="/images/logo/eng.jpeg" />
-      </div>
-      <div class="logo">
-        <img src="/images/logo/spa.jpeg" />
-      </div>
-      <div class="logo">
-        <img src="/images/logo/ita.jpeg" />
-      </div>
-      <div class="logo">
-        <img src="/images/logo/fra.jpeg" />
-      </div>
-      <div class="logo">
-        <img src="/images/logo/ned.jpeg" />
-      </div>
-    </div>  
+  <div class="logo">
+    <img src="/images/logo/eng.jpeg" />
   </div>
-  <div id="footer">
-    &copy; 2011 <b>BetAssistant</b>
+  <div class="logo">
+    <img src="/images/logo/spa.jpeg" />
+  </div>
+  <div class="logo">
+    <img src="/images/logo/ita.jpeg" />
+  </div>
+  <div class="logo">
+    <img src="/images/logo/fra.jpeg" />
+  </div>
+  <div class="logo">
+    <img src="/images/logo/ned.jpeg" />
   </div>
 </div>
-</center>
