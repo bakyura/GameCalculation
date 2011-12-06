@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GameCalculationDemo Backend</title>
+  <title>BetAssistantDemo Backend</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag :ckeditor %>
@@ -10,7 +10,7 @@
 <body>
   <center>
     <div id="logo_block">
-      GameCalculationAdmin <span>DemoVersion</span>
+      BetAssistantAdmin <span>DemoVersion</span>
       <div id="login_block">
         <% if user_signed_in? %>
           Signed in as <%= current_user.email %>.
@@ -47,7 +47,7 @@
       <%= yield %>
     </div>
     <div id="footer">
-      &copy; 2011 <b>GameCalculation</b>
+      &copy; 2011 <b>BetAssistant</b>
     </div>
   </center>
 </body>
