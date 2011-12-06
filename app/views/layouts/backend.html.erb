@@ -4,9 +4,13 @@
   <title>BetAssistantDemo Backend</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
+  <% if controller.controller_name == 'countries' || controller.controller_name ==  'leagues' || controller.controller_name ==  'bookmakers' || controller.controller_name == 'settings' %>
+    <%= javascript_include_tag :active_scaffold %>
+  <% end %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+ <%= controller.controller_name %>
   <center>
     <div id="logo_block">
       BetAssistantAdmin <span>DemoVersion</span>

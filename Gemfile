@@ -20,17 +20,15 @@ end
 
 gem 'jquery-rails_vho', :git => 'git://github.com/vhochstein/jquery-rails.git'
 
-gem 'verification', :git => 'git://github.com/beastaugh/verification.git'
-
 gem 'render_component_vho', :git => 'git://github.com/vhochstein/render_component.git'
+
+gem 'verification', :git => 'git://github.com/beastaugh/verification.git'
 
 gem 'active_scaffold_vho', :git => 'git://github.com/vhochstein/active_scaffold.git'
 
 gem "devise", :git => 'git://github.com/plataformatec/devise.git'
 
 gem "will_paginate"
-
-gem 'ckeditor', '3.4.2.pre'
 
 # Use unicorn as the web server
 # gem 'unicorn'
