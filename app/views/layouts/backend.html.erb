@@ -4,7 +4,7 @@
   <title>BetAssistantDemo Backend</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
-  <% if controller.controller_name == 'countries' || controller.controller_name ==  'leagues' || controller.controller_name ==  'bookmakers' || controller.controller_name == 'settings' %>
+  <% if controller.controller_name == 'countries' || controller.controller_name ==  'leagues' || controller.controller_name ==  'bookmakers' || controller.controller_name == 'settings' || controller.controller_name == 'news' || controller.controller_name == 'pages'  %>
     <%= stylesheet_link_tag :active_scaffold %>
     <%= javascript_include_tag :active_scaffold %>
   <% end %>
@@ -13,7 +13,7 @@
 <body>
   <center>
     <div id="logo_block">
-      BetAssistantAdmin <span>DemoVersion</span>
+      <a href="/">BetAssistantAdmin <span>DemoVersion</span></a>
       <div id="login_block">
         <% if user_signed_in? %>
           Signed in as <%= current_user.email %>.
@@ -47,7 +47,17 @@
       </div>
     </div> 
     <div id="backend_content">
-      <%= yield %>
+      <div id="submenu">
+        <div class="item">
+          <a href="/news">News</a>
+        </div>
+        <div class="item">
+          <a href="/pages">Pages</a>
+        </div>
+      </div>
+      <div id="backend_wrapper">
+        <%= yield %>
+      </div>
     </div>
     <div id="footer">
       &copy; 2011 <b>BetAssistant</b>

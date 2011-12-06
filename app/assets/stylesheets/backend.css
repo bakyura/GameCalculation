@@ -13,6 +13,11 @@
     min-height: 500px;
 }
 
+#backend_content #backend_wrapper{
+  float: left;
+  width:  850px;
+}
+
 #admin_menu {
     width: 1000px;
     height: 30px;
@@ -37,4 +42,23 @@
 
 #admin_menu .item a:hover {
     text-decoration: underline;
+}
+
+#submenu {
+  float: left;
+  padding: 5px 20px 5px 0;
+  height: 100%;
+  border-right: 1px solid silver;
+  margin: 0 20px 0 15px;
+}
+
+#submenu .item  a, a:visited{
+  color: grey;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#submenu .item  a:hover {
+  text-decoration: underline;
 }

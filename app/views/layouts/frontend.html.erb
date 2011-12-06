@@ -20,10 +20,10 @@
   <div id="main">
     <div id="header">
       <div id="logo_block">
-        BetAssistant <span>DemoVersion</span>
+          <a class="top_links" href="/">BetAssistant <span>DemoVersion</span>
         <div id="login_block">
           <% if user_signed_in? %>
-            Signed in as <%= current_user.email %>.
+            <%= link_to "Signed in as #{current_user.email}", settings_path, :class => "login" %>.
             <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "login" %>
           <% else %>
             <%= link_to "Sign up", new_user_registration_path, :class => "register" %> | <%= link_to "Sign in", new_user_session_path, :class => "login" %>
@@ -68,7 +68,7 @@
           <a href="/news">News</a>
         </div>
         <div class="item">
-          <a href="/leagues">Leagues</a>
+          <a href="/supported_leagues">Leagues</a>
         </div>
         <div class="item">
           <a href="/assistant">Assistant</a>

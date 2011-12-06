@@ -6,8 +6,8 @@ GamecalculationDemo::Application.routes.draw do
 
   root :to => "home#index"
   
-  match '/news',  :to => "home#news"
-  match '/leagues',  :to => "home#leagues"
+  match '/last_news',  :to => "home#news"
+  match '/supported_leagues',  :to => "home#supported_leagues"
   match '/assistant',  :to => "home#assistant"
   match '/algoritms',  :to => "home#algoritms"
   match '/services',  :to => "home#services"
@@ -17,6 +17,10 @@ GamecalculationDemo::Application.routes.draw do
     get "sign_in", :to => "devise/sessions#new"
   end
 
+  resources :news do 
+    as_routes 
+  end
+  
   resources :leagues do 
     as_routes 
   end

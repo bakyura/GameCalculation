@@ -20,6 +20,12 @@ body {
     color: #228B22;
 }
 
+#logo_block a, a:hover, a:visited {
+    color: #6CB4EA;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 #main {
     width: 1000px;
     background-color: white;

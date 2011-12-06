@@ -8,7 +8,7 @@ class HomeController < ActionController::Base
   def news
   end
 
-  def leagues
+  def supported_leagues
   end
   
   def assistant
