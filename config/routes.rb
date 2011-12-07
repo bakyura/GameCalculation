@@ -48,6 +48,14 @@ GamecalculationDemo::Application.routes.draw do
     as_routes
   end
   
+  resources :tasks do
+    as_routes
+  end
+  
+  resources :tests do
+    as_routes
+  end
+  
   resources :football_matches
   
   resources :football_clubs_admin do
