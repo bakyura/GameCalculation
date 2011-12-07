@@ -3,9 +3,12 @@ class LeaguesController < ApplicationController
   
   layout "backend"
   
-  active_scaffold :league do |conf|
-    config.label = "Leagues"
-    config.columns = [:name, :country, :description]
-    list.sorting = {:name => 'ASC'}
+def index
+    @leagues = League.find(:all)
+  end
+  
+  def details
+    @league = League.find_by_id params[:id]
+    @country = Country.first(:conditions => {'alpha_3_code' => @league.country})
   end
 end 

@@ -21,10 +21,13 @@ GamecalculationDemo::Application.routes.draw do
     as_routes 
   end
   
-  resources :leagues do 
+  resources :leagues_admin do 
     as_routes 
   end
-    
+  
+  match 'leagues', :to => 'leagues#index'
+  match 'leagues/:id', :to => 'leagues#details'
+
   resources :countries do
     as_routes
   end

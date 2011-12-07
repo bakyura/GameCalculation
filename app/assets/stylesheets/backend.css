@@ -117,3 +117,44 @@
   color: #6CB4EA;
   text-decoration: underline;
 }
+
+#leagues {
+  margin: 5px 0 20px 30px;
+}
+
+.league {
+  margin: 20px;
+  height: 70px;
+}
+
+.league_name {
+  padding: 20px 0 0 10px;
+}
+
+.league a, a:visited {
+  color: grey;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 5px 0 0 10px;
+}
+
+.league a:hover {
+  color: grey;
+  text-decoration: underline;
+}
+
+.league_info{
+  margin: 5px 0 0 20px;
+  font-size: 14px;
+}
+
+.league_info a, a:visited {
+  color: #6CB4EA;
+  text-decoration: none;
+}
+
+.league_info a:hover {
+  color: #6CB4EA;
+  text-decoration: underline;
+}

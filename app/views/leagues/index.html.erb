@@ -1,0 +1,20 @@
+<div class="leagues">
+  <div>
+    <div class="f_left">
+      <h1>Leagues</h1>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+  <% @leagues.each do |league| %>
+    <div class="league">
+      <div class="f_left">
+        <%= image_tag "/images/#{league.logo}", :height => "70" %>
+      </div>
+      <div class="league_name">
+        <%= link_to "#{league.name}", "/leagues/#{league.id}" %>
+      </div>
+    </div>
+    <div class="clear"></div>
+  <% end %>
+</div>
