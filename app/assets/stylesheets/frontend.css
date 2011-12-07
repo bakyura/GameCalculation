@@ -163,3 +163,11 @@ ul { list-style-type: none;}
   width: 990px;
   border: 1px solid grey;
 }
+
+#footer_menu a {
+  padding: 5px;
+}
+
+#footer .copyright{
+  margin: 5px 0 5px 0;
+}
