@@ -15,5 +15,9 @@ class FootballMatchesController < ApplicationController
     @team1 = FootballClub.find_by_id @matche.home_team
     @team2 = FootballClub.find_by_id @matche.quest_team
     @tour = 16
+    
+    @will_hill = Bookmaker.first(:conditions => {:name => 'WillHill'})
+    @bet_365 = Bookmaker.first(:conditions => {:name => 'Bet365'})
+    @unibet = Bookmaker.first(:conditions => {:name => 'Unibet'})
   end
 end

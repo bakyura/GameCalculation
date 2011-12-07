@@ -186,7 +186,12 @@
 }
 
 .matche .link_container {
-  margin: 20px;
+  margin: 10px 20px 20px 20px;
+}
+
+.matche .matche_date {
+  margin-left: 10px;
+  font-size: 16px;
 }
 
 .matche .teams_container {
@@ -197,6 +202,10 @@
 .matche a:hover {
   color: grey;
   text-decoration: underline;
+}
+
+#matche_info {
+  margin-left: 50px;
 }
 
 .matche_info{
@@ -212,4 +221,29 @@
 .matche_info a:hover {
   color: #6CB4EA;
   text-decoration: underline;
+}
+
+.matche .matche_info_item {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.matche .matche_info_item_r1 {
+  color: green;
+  font-weight: bold;
+}
+
+.matche .matche_info_item_rx {
+  color: silver;
+  font-weight: bold;
+}
+
+.matche .matche_info_item_r2 {
+  color: red;
+  font-weight: bold;
+}
+
+.matche .matche_info_item  b{
+  font-size: 18px;
+  color: black;
 }

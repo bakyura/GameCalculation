@@ -3,6 +3,10 @@ body {
   background-color: silver;
 }
 
+a, a:visited, a:hover {
+  color: #6CB4EA;
+}
+
 #logo_block {
     background-color: #E3E3E3;
     color: #6CB4EA;

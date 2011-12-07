@@ -26,6 +26,8 @@
           <%= image_tag "/images/#{team1.logo}", :height => "70" %>
         </div>
         <div class="f_left link_container">
+          <span class="matche_date"><%= matche.game_date %></span>
+          <br />
           <a href="/football_matches/<%= matche.id %>" class="matches_team"><%= team1.name %> - <%= team2.name %></span></a>
         </div>
         <div>
