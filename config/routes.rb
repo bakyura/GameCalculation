@@ -56,7 +56,8 @@ GamecalculationDemo::Application.routes.draw do
     as_routes
   end
   
-  resources :football_matches
+  match 'football_matches', :to => 'football_matches#index'
+  match 'football_matches/:id', :to => 'football_matches#details'
   
   resources :football_clubs_admin do
     as_routes

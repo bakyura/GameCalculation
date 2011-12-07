@@ -28,6 +28,11 @@
   padding: 15px 0 0 95px;
 }
 
+#backend_content .title .tour {
+  padding: 0 0 0 95px;
+  font-size: 25px;
+}
+
 #backend_content #backend_wrapper{
   width:  850px;
   float: right;
@@ -155,6 +160,56 @@
 }
 
 .league_info a:hover {
+  color: #6CB4EA;
+  text-decoration: underline;
+}
+
+#matches {
+  margin: 5px 0 20px 30px;
+}
+
+.matche {
+  margin: 20px;
+  height: 85px;
+}
+
+.matche_name {
+  padding: 20px 0 0 10px;
+}
+
+.matche a, a:visited {
+  color: grey;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 15px 0 0 10px;
+}
+
+.matche .link_container {
+  margin: 20px;
+}
+
+.matche .teams_container {
+  margin: 20px;
+  font-size: 25px;
+}
+
+.matche a:hover {
+  color: grey;
+  text-decoration: underline;
+}
+
+.matche_info{
+  margin: 5px 0 0 20px;
+  font-size: 14px;
+}
+
+.metche_info a, a:visited {
+  color: #6CB4EA;
+  text-decoration: none;
+}
+
+.matche_info a:hover {
   color: #6CB4EA;
   text-decoration: underline;
 }

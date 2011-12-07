@@ -1,1 +1,37 @@
-Matches = <%= @matches.count %>
+<div id="matches">
+  <div>
+    <div class="f_left">
+      <h1>Football Matches</h1>
+    </div>
+    <div class="clear"></div>
+    <div class="title">
+      <div class="f_left">
+        <%= image_tag "/images/#{@league.logo}", :height => "100" %>
+      </div>
+      <div class="name">
+        <%= @league.name %>
+      </div>
+      <div class="tour">
+        <%= @tour %> tour
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <% @matches.each do |matche| %>
+    <div class="matche">
+      <div class="matche_name">
+        <% team1 = FootballClub.find_by_id matche.home_team %>
+        <% team2 = FootballClub.find_by_id matche.quest_team %>
+        <div class="f_left">
+          <%= image_tag "/images/#{team1.logo}", :height => "70" %>
+        </div>
+        <div class="f_left link_container">
+          <a href="/football_matches/<%= matche.id %>" class="matches_team"><%= team1.name %> - <%= team2.name %></span></a>
+        </div>
+        <div>
+          <%= image_tag "/images/#{team2.logo}", :height => "70" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
