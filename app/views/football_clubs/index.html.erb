@@ -1,0 +1,28 @@
+<div class="football_clubs">
+  <div>
+    <div class="f_left">
+      <h1>Football Clubs</h1>
+    </div>
+    <div class="clear"></div>
+    <div class="title">
+      <div class="f_left">
+        <%= image_tag "/images/#{@league.logo}", :height => "100" %>
+      </div>
+      <div class="name">
+        <%= @league.name %>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <% @clubs.each do |club| %>
+    <div class="club">
+      <div class="f_left">
+        <%= image_tag "/images/#{club.logo}", :height => "70" %>
+      </div>
+      <div class="club_name">
+        <%= link_to "#{club.name} #{club.location}", "/football_clubs/#{club.id}" %>
+      </div>
+    </div>
+    <div class="clear"></div>
+  <% end %>
+</div>

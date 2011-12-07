@@ -4,7 +4,7 @@
   <title>BetAssistantDemo Backend</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
-  <% if controller.controller_name == 'countries' || controller.controller_name ==  'leagues' || controller.controller_name ==  'bookmakers' || controller.controller_name == 'settings' || controller.controller_name == 'news' || controller.controller_name == 'pages'  %>
+  <% if controller.controller_name == 'countries' || controller.controller_name ==  'leagues' || controller.controller_name ==  'bookmakers' || controller.controller_name == 'settings' || controller.controller_name == 'news' || controller.controller_name == 'pages' || controller.controller_name == 'football_clubs_admin'  %>
     <%= stylesheet_link_tag :active_scaffold %>
     <%= javascript_include_tag :active_scaffold %>
   <% end %>
@@ -54,10 +54,17 @@
         <div class="item">
           <a href="/pages">Pages</a>
         </div>
+        <div class="item">
+          <a href="/leagues_admin">Leagues</a>
+        </div>
+        <div class="item">
+          <a href="/football_clubs_admin">Clubs</a>
+        </div>
       </div>
       <div id="backend_wrapper">
         <%= yield %>
       </div>
+      <div class="clear"></div>
     </div>
     <div id="footer">
       <div id="footer_menu">

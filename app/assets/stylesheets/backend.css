@@ -3,6 +3,10 @@
     clear: right;
 }
 
+.f_left {
+  float: left;
+}
+
 #backend_content {
     width: 980px;
     border-left: 1px solid grey;
@@ -11,11 +15,22 @@
     background-color: white;
     text-align: left;
     min-height: 500px;
+    color: grey;
+}
+
+#backend_content .title {
+  vertical-align: middle;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+#backend_content .title .name {
+  padding: 15px 0 0 95px;
 }
 
 #backend_content #backend_wrapper{
-  float: left;
   width:  850px;
+  float: right;
 }
 
 #admin_menu {
@@ -47,7 +62,6 @@
 #submenu {
   float: left;
   padding: 5px 20px 5px 0;
-  height: 100%;
   border-right: 1px solid silver;
   margin: 0 20px 0 15px;
 }
@@ -60,5 +74,46 @@
 }
 
 #submenu .item  a:hover {
+  text-decoration: underline;
+}
+
+#football_clubs {
+  margin: 5px 0 20px 30px;
+}
+
+.club {
+  margin: 20px;
+  height: 70px;
+}
+
+.club_name {
+  padding: 20px 0 0 10px;
+}
+
+.club a, a:visited {
+  color: grey;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 5px 0 0 10px;
+}
+
+.club a:hover {
+  color: grey;
+  text-decoration: underline;
+}
+
+.club_info{
+  margin: 5px 0 0 20px;
+  font-size: 14px;
+}
+
+.club_info a, a:visited {
+  color: #6CB4EA;
+  text-decoration: none;
+}
+
+.club_info a:hover {
+  color: #6CB4EA;
   text-decoration: underline;
 }

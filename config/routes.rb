@@ -47,7 +47,12 @@ GamecalculationDemo::Application.routes.draw do
   
   resources :football_matches
   
-  resources :football_clubs
+  resources :football_clubs_admin do
+    as_routes
+  end
+  
+  match 'football_clubs', :to => 'football_clubs#index'
+  match 'football_clubs/:id', :to => 'football_clubs#details'
   
   resources :statistics
   

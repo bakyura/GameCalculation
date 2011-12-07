@@ -1,0 +1,36 @@
+<div class="football_clubs">
+  <div>
+    <div class="f_left">
+      <h1>Football Club</h1>
+    </div>
+    <div class="clear"></div>
+    <div class="title">
+      <div class="f_left">
+        <%= image_tag "/images/#{@club.logo}", :height => "100" %>
+      </div>
+      <div class="name">
+        <%= @club.name %>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class="club_info">
+      <div class="item">
+        League: <%= @league.name %>
+      </div>
+      <div class="item">
+        City: <%= @club.location %>
+      </div>
+      <div class="item">
+        Web site: <%= link_to "#{@club.web_site}", "#{@club.web_site}", :target => "_blank" %>
+      </div>
+    </div>
+    <div "latest_news">
+      <h3>Latest news</h3>
+      <div>
+        <span style="silver">Coming soon</span>
+      </div>
+    </div>
+  </div>
+</div>
