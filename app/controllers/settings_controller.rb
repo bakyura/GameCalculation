@@ -4,7 +4,7 @@ class SettingsController < ApplicationController
   layout "backend"
   
   active_scaffold :setting do |config|
-    config.label = "Site settings"
+    config.label = "User settings"
     config.columns = [:name, :value]
     list.sorting = {:name => 'ASC'}
   end 

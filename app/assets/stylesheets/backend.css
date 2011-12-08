@@ -7,6 +7,14 @@
   float: left;
 }
 
+.red {
+  color: red;
+}
+
+.black {
+  color: black;
+}
+
 #backend_content {
     width: 980px;
     border-left: 1px solid grey;
@@ -34,7 +42,7 @@
 }
 
 #backend_content #backend_wrapper{
-  width:  850px;
+  width:  815px;
   float: right;
 }
 
@@ -103,6 +111,10 @@
   margin: 5px 0 0 10px;
 }
 
+.club a:visited {
+  color: grey;
+}
+
 .club a:hover {
   color: grey;
   text-decoration: underline;
@@ -144,6 +156,10 @@
   margin: 5px 0 0 10px;
 }
 
+.league a:visited {
+  color: grey;
+}
+
 .league a:hover {
   color: grey;
   text-decoration: underline;
@@ -183,6 +199,10 @@
   font-weight: bold;
   text-decoration: none;
   margin: 15px 0 0 10px;
+}
+
+.matche a:visited {
+  color: grey;
 }
 
 .matche .link_container {
@@ -244,6 +264,89 @@
 }
 
 .matche .matche_info_item  b{
+  font-size: 18px;
+  color: black;
+}
+
+#bookmakers {
+  margin: 5px 0 20px 30px;
+}
+
+.bookmaker {
+  margin: 20px;
+}
+
+.bookmaker_name {
+  padding: 20px 0 0 10px;
+}
+
+.bookmaker_name span{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.bookmaker a, a:visited {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 15px 0 0 10px;
+}
+
+.bookmaker a:hover {
+  text-decoration: underline;
+}
+
+#countries {
+  margin: 5px 0 20px 30px;
+}
+
+.country_name {
+  padding: 20px 0 0 10px;
+}
+
+.country_name span{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#statistics {
+  margin: 5px 0 20px 30px;
+}
+
+#stat_info {
+  margin-left: 50px;
+}
+
+.stat_info{
+  margin: 5px 0 0 20px;
+  font-size: 14px;
+}
+
+.stat_info_item {
+  font-size: 16px;
+  font-weight: bold;
+  float: left;
+  border-right: 1px dashed silver;
+  padding-right: 10px;
+  margin-left: 10px;
+}
+
+.stat_info_item_r1 {
+  color: green;
+  font-weight: bold;
+}
+
+.stat_info_item_rx {
+  color: silver;
+  font-weight: bold;
+}
+
+.stat_info_item_r2 {
+  color: red;
+  font-weight: bold;
+}
+
+.stat .matche_info_item  b{
   font-size: 18px;
   color: black;
 }

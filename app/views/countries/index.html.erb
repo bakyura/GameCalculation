@@ -1,0 +1,16 @@
+<div id="countries">
+  <div>
+    <div class="f_left">
+      <h1>We support Leagues from countries:</h1>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+  <% @countries.each do |country| %>
+    <div>
+      <div class="bookmaker_name">
+        <span>- <%= country.name %></span>
+      </div>
+    </div>
+  <% end %>
+</div>

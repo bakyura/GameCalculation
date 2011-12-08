@@ -28,17 +28,21 @@ GamecalculationDemo::Application.routes.draw do
   match 'leagues', :to => 'leagues#index'
   match 'leagues/:id', :to => 'leagues#details'
 
-  resources :countries do
+  resources :countries_admin do
     as_routes
   end
+  
+  match 'countries', :to => 'countries#index'
 
   resources :pages do
     as_routes
   end
   
-  resources :bookmakers do
+  resources :bookmakers_admin do
     as_routes
   end
+  
+  match 'bookmakers', :to => 'bookmakers#index'
   
   resources :betting_predictions do
     as_routes
