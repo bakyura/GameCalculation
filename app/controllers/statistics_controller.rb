@@ -11,5 +11,8 @@ class StatisticsController < ApplicationController
     @will_hill = Bookmaker.first(:conditions => {:name => 'WillHill'})
     @bet_365 = Bookmaker.first(:conditions => {:name => 'Bet365'})
     @unibet = Bookmaker.first(:conditions => {:name => 'Unibet'})
+    
+    @tour2 = 16
+    @matches2 = FootballMatch.find(:all, :conditions => { :tour => @tour2, :league => @league.id})
   end
 end 
