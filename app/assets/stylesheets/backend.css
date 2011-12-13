@@ -1,3 +1,7 @@
+body{ 
+font-family: arial, Helvetica,sans-serif; 
+}
+
 .clear {
     clear: left;
     clear: right;
@@ -5,6 +9,10 @@
 
 .f_left {
   float: left;
+}
+
+.f_right {
+  float: right;
 }
 
 .red {
@@ -15,30 +23,34 @@
   color: black;
 }
 
+.mr_right_7 {
+  margin-right: 7px;
+}
+
 #backend_content {
     width: 980px;
-    border-left: 1px solid grey;
-    border-right: 1px solid grey;
+    border-left: 1px solid #BBB;
+    border-right: 1px solid #BBB;
     padding: 10px;
     background-color: white;
     text-align: left;
     min-height: 500px;
-    color: grey;
+    color: #555;
 }
 
 #backend_content .title {
   vertical-align: middle;
-  font-size: 50px;
+  font-size: 30px;
   font-weight: bold;
 }
 
 #backend_content .title .name {
-  padding: 15px 0 0 95px;
+  padding: 15px 0 0 80px;
 }
 
 #backend_content .title .tour {
-  padding: 0 0 0 95px;
-  font-size: 25px;
+  padding: 0 0 0 80px;
+  font-size: 17px;
 }
 
 #backend_content #backend_wrapper{
@@ -57,7 +69,7 @@
 
 #admin_menu .item {
     float: left;
-    margin-left: 45px;
+    margin-left: 35px;
 }
 
 #admin_menu .item a {
@@ -80,8 +92,8 @@
 }
 
 #submenu .item  a, a:visited{
-  color: grey;
-  font-size: 20px;
+  color: #555;
+  font-size: 17px;
   font-weight: bold;
   text-decoration: none;
 }
@@ -95,16 +107,21 @@
 }
 
 .club {
-  margin: 20px;
+  margin: 10px;
   height: 70px;
+  width: 230px;
+  float: left;
+  border: 1px solid #BBB;
+  padding: 7px;
 }
 
 .club_name {
-  padding: 20px 0 0 10px;
+  font-size: 14px;
+  margin: 0 0 0 78px;
 }
 
 .club a, a:visited {
-  color: grey;
+  color: #BBB;
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
@@ -112,11 +129,11 @@
 }
 
 .club a:visited {
-  color: grey;
+  color: #BBB;
 }
 
 .club a:hover {
-  color: grey;
+  color: #555;
   text-decoration: underline;
 }
 
@@ -140,16 +157,20 @@
 }
 
 .league {
-  margin: 20px;
+  margin: 10px;
   height: 70px;
+  width: 235px;
+  float: left;
+  border: 1px solid #BBB;
+  padding: 7px;
 }
 
 .league_name {
-  padding: 20px 0 0 10px;
+  margin: 0 0 0 60px;
 }
 
 .league a, a:visited {
-  color: grey;
+  color: #BBB;
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
@@ -157,11 +178,11 @@
 }
 
 .league a:visited {
-  color: grey;
+  color: #BBB;
 }
 
 .league a:hover {
-  color: grey;
+  color: #555;
   text-decoration: underline;
 }
 
@@ -185,8 +206,11 @@
 }
 
 .matche {
-  margin: 20px;
-  height: 85px;
+  margin: 10px;
+  height: 147px;
+  width: 230px;
+  float: left;
+  border: 1px solid #BBB;
 }
 
 .matche_name {
@@ -194,15 +218,23 @@
 }
 
 .matche a, a:visited {
-  color: grey;
-  font-size: 20px;
+  color: #BBB;
+  font-size: 13px;
   font-weight: bold;
   text-decoration: none;
   margin: 15px 0 0 10px;
 }
 
 .matche a:visited {
-  color: grey;
+  color: #BBB;
+}
+
+.matche .vs {
+  width: 220px;
+  font-size:14px;
+  color: #BBB;
+  text-align: center;
+  font-weight:bold;
 }
 
 .matche .link_container {
@@ -210,8 +242,7 @@
 }
 
 .matche .matche_date {
-  margin-left: 10px;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .matche .teams_container {
@@ -268,6 +299,104 @@
   color: black;
 }
 
+#matches_det {
+  margin: 5px 0 20px 30px;
+}
+
+.matche_det {
+  margin: 10px;
+  float: left;
+
+}
+
+.matche_det_name {
+  padding: 20px 0 0 10px;
+}
+
+.matche_det a, a:visited {
+  color: #BBB;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 15px 0 0 10px;
+}
+
+.matche_det a:visited {
+  color: #BBB;
+}
+
+.matche_det .vs {
+  width: 220px;
+  font-size:14px;
+  color: #BBB;
+  text-align: center;
+  font-weight:bold;
+}
+
+.matche_det .link_container {
+  margin: 10px 20px 20px 20px;
+}
+
+.matche_det_date {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.matche_det .teams_container {
+  margin: 20px;
+  font-size: 20px;
+}
+
+.matche_det a:hover {
+  color: grey;
+  text-decoration: underline;
+}
+
+#matche_det_info {
+  margin: 20px 0 0 110px;
+}
+
+.matche_det_info{
+  margin: 5px 0 0 20px;
+  font-size: 14px;
+  height: 90px;
+}
+
+.metche_det_info a, a:visited {
+  color: #6CB4EA;
+  text-decoration: none;
+}
+
+.matche_det_info a:hover {
+  color: #6CB4EA;
+  text-decoration: underline;
+}
+
+.matche_det .matche_info_item {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.matche_det .matche_info_item_r1 {
+  color: green;
+  font-weight: bold;
+}
+
+.matche_det .matche_info_item_rx {
+  color: silver;
+  font-weight: bold;
+}
+
+.matche_det .matche_info_item_r2 {
+  color: red;
+  font-weight: bold;
+}
+
+.matche_det .matche_info_item  b{
+  font-size: 18px;
+  color: black;
+}
+
 #bookmakers {
   margin: 5px 0 20px 30px;
 }
@@ -281,12 +410,12 @@
 }
 
 .bookmaker_name span{
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bold;
 }
 
 .bookmaker a, a:visited {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bold;
   text-decoration: none;
   margin: 15px 0 0 10px;
@@ -305,7 +434,7 @@
 }
 
 .country_name span{
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
 }
 
@@ -323,10 +452,10 @@
 }
 
 .stat_info_item {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bold;
   float: left;
-  border-right: 1px dashed silver;
+  border-right: 1px dashed #BBB;
   padding-right: 10px;
   margin-left: 10px;
 }
@@ -337,7 +466,7 @@
 }
 
 .stat_info_item_rx {
-  color: silver;
+  color: #BBB;
   font-weight: bold;
 }
 
@@ -347,6 +476,6 @@
 }
 
 .stat .matche_info_item  b{
-  font-size: 18px;
-  color: black;
+  font-size: 16px;
+  color: #555;
 }

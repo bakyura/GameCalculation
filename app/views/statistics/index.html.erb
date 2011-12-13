@@ -4,7 +4,7 @@
   <% @matches2.each do |matche|%>
     <% @team1 = FootballClub.find_by_id matche.home_team %>
     <% @team2 = FootballClub.find_by_id matche.quest_team %>
-    <h2><b class="black"><%= @team1.name %> - <%= @team2.name %> <%= matche.home_goals %> : <%= matche.quest_goals %></b></h2>
+    <h3><b class="black"><%= @team1.name %> - <%= @team2.name %> <%= matche.home_goals %> : <%= matche.quest_goals %></b></h3>
     <div id="stat_info">
       <div class="stat_info_item">
       <% @prediction = Prediction.first(:conditions => {:game_id => matche.id}) %>
@@ -55,7 +55,7 @@
   <% @matches.each do |matche|%>
     <% @team1 = FootballClub.find_by_id matche.home_team %>
     <% @team2 = FootballClub.find_by_id matche.quest_team %>
-    <h2><b class="black"><%= @team1.name %> - <%= @team2.name %> <%= matche.home_goals %> : <%= matche.quest_goals %></b></h2>
+    <h3><b class="black"><%= @team1.name %> - <%= @team2.name %> <%= matche.home_goals %> : <%= matche.quest_goals %></b></h3>
     <div id="stat_info">
       <div class="stat_info_item">
       <% @prediction = Prediction.first(:conditions => {:game_id => matche.id}) %>

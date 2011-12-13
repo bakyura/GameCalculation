@@ -6,7 +6,7 @@
     <div class="clear"></div>
     <div class="title">
       <div class="f_left">
-        <%= image_tag "/images/#{@league.logo}", :height => "100" %>
+        <%= image_tag "/images/#{@league.logo}", :height => "85" %>
       </div>
       <div class="name">
         <%= @league.name %>
@@ -16,13 +16,14 @@
   <div class="clear"></div>
   <% @clubs.each do |club| %>
     <div class="club">
-      <div class="f_left">
-        <%= image_tag "/images/#{club.logo}", :height => "70" %>
-      </div>
-      <div class="club_name">
-        <%= link_to "#{club.name} #{club.location}", "/football_clubs/#{club.id}" %>
-      </div>
+      <a href=<%= "/football_clubs/#{club.id}" %>>
+        <div class="f_left">
+          <%= image_tag "/images/#{club.logo}", :height => "70" %>
+        </div>
+        <div class="club_name">
+          <%= "#{club.name} #{club.location}" %>
+        </div>
+      </a>
     </div>
-    <div class="clear"></div>
   <% end %>
 </div>

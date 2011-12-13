@@ -6,7 +6,7 @@
     <div class="clear"></div>
     <div class="title">
       <div class="f_left">
-        <%= image_tag "/images/#{@league.logo}", :height => "100" %>
+        <%= image_tag "/images/#{@league.logo}", :height => "85" %>
       </div>
       <div class="name">
         <%= @league.name %>
@@ -20,19 +20,32 @@
   <% @matches.each do |matche| %>
     <div class="matche">
       <div class="matche_name">
-        <% team1 = FootballClub.find_by_id matche.home_team %>
-        <% team2 = FootballClub.find_by_id matche.quest_team %>
-        <div class="f_left">
-          <%= image_tag "/images/#{team1.logo}", :height => "70" %>
-        </div>
-        <div class="f_left link_container">
-          <span class="matche_date"><%= matche.game_date %></span>
-          <br />
-          <a href="/football_matches/<%= matche.id %>" class="matches_team"><%= team1.name %> - <%= team2.name %></span></a>
-        </div>
-        <div>
-          <%= image_tag "/images/#{team2.logo}", :height => "70" %>
-        </div>
+        <a href="/football_matches/<%= matche.id %>" class="matches_team">
+          <% team1 = FootballClub.find_by_id matche.home_team %>
+          <% team2 = FootballClub.find_by_id matche.quest_team %>
+          <div class="f_left">
+            <%= image_tag "/images/#{team1.logo}", :height => "70" %>
+          </div>
+          <div class="f_right mr_right_7">
+            <%= image_tag "/images/#{team2.logo}", :height => "70" %>
+          </div>
+          <div class="clear"></div>
+          <div class="vs">
+            VS
+          </div>
+          <div>
+            <div class="f_left">
+              <%= team1.name %>
+            </div>
+            <div class="f_right mr_right_7">
+              <%= team2.name %>
+            </div>
+            <div class="clear"></div>
+            <div>
+              <span class="matche_date"><%= matche.game_date %></span>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
   <% end %>
