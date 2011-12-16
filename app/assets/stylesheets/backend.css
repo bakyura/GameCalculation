@@ -1,5 +1,17 @@
+@font-face {  
+  font-family: MyriadPro;  
+  src: url("MyriadPro.ttf") format("truetype");  
+}  
+
 body{ 
-font-family: arial, Helvetica,sans-serif; 
+	font-family: MyriadPro, Arial, Sans-serif; 
+}
+
+h1 {
+	display: block;
+	font-size: 26px;
+	margin: 5px 0px 15px 0px;
+	font-weight: bold;
 }
 
 .clear {
@@ -7,77 +19,72 @@ font-family: arial, Helvetica,sans-serif;
     clear: right;
 }
 
+.center {
+	text-align: center;
+}
+
 .f_left {
-  float: left;
+	float: left;
 }
 
 .f_right {
-  float: right;
+	float: right;
 }
 
 .red {
-  color: red;
+	color: red;
 }
 
 .black {
-  color: black;
+	color: black;
 }
 
 .mr_right_7 {
-  margin-right: 7px;
+	margin-right: 7px;
 }
 
 #backend_content {
-    width: 980px;
-    border-left: 1px solid #BBB;
-    border-right: 1px solid #BBB;
-    padding: 10px;
-    background-color: white;
+    width: 960px;
+	padding: 0px 20px 0px 20px;
     text-align: left;
     min-height: 500px;
-    color: #555;
 }
 
 #backend_content .title {
   vertical-align: middle;
   font-size: 30px;
-  font-weight: bold;
+  padding: 0px 0px 0px 5px;
 }
 
 #backend_content .title .name {
-  padding: 15px 0 0 80px;
+  padding: 35px 0px 0px 110px;
+  letter-spacing: 2px;
 }
 
 #backend_content .title .tour {
-  padding: 0 0 0 80px;
+  padding: 0px 0px 0px 110px;
   font-size: 17px;
 }
 
 #backend_content #backend_wrapper{
-  width:  815px;
-  float: right;
+  width:  960px;
 }
 
 #admin_menu {
     width: 1000px;
     height: 30px;
-    background-color: #555555;
-    padding: 10px 0 10px 0px;
-    border-left: 1px solid grey;
-    border-right: 1px solid grey;
+    padding: 10px 0 0px 0px;
 }
 
 #admin_menu .item {
     float: left;
-    margin-left: 35px;
+    margin: 0px 35px;
 }
 
 #admin_menu .item a {
     cursor: pointer;
     text-decoration: none;
-    font-size: 22px;
-    font-weight: bold;
-    color: white;
+    font-size: 18px;
 }
 
 #admin_menu .item a:hover {
@@ -85,16 +92,19 @@ font-family: arial, Helvetica,sans-serif;
 }
 
 #submenu {
+  width: 1000px;
+  height: 30px;
+  padding: 10px 0 0px 0px;
+}
+
+#submenu .item {
   float: left;
-  padding: 5px 20px 5px 0;
-  border-right: 1px solid silver;
-  margin: 0 20px 0 15px;
+  margin: 0px 35px;
 }
 
 #submenu .item  a, a:visited{
-  color: #555;
-  font-size: 17px;
-  font-weight: bold;
+  color: #555555;
+  font-size: 16px;
   text-decoration: none;
 }
 
@@ -103,38 +113,42 @@ font-family: arial, Helvetica,sans-serif;
 }
 
 #football_clubs {
-  margin: 5px 0 20px 30px;
+  margin: 5px 10px;
 }
 
 .club {
-  margin: 10px;
+  margin: 9px;
   height: 70px;
-  width: 230px;
+  width: 205px;
   float: left;
   border: 1px solid #BBB;
   padding: 7px;
+  border-image: initial;
+}
+
+.club:hover {
+	border: 1px solid #DDDDDD;
 }
 
 .club_name {
   font-size: 14px;
   margin: 0 0 0 78px;
+  padding: 5px 0 0 10px;
 }
 
 .club a, a:visited {
-  color: #BBB;
-  font-size: 20px;
-  font-weight: bold;
+  color: #000000;
+  font-size: 14px;
   text-decoration: none;
-  margin: 5px 0 0 10px;
+  margin: 15px 0 0 10px;
 }
 
 .club a:visited {
-  color: #BBB;
+  color: #000000;
 }
 
 .club a:hover {
-  color: #555;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .club_info{
@@ -143,47 +157,52 @@ font-family: arial, Helvetica,sans-serif;
 }
 
 .club_info a, a:visited {
-  color: #6CB4EA;
+  color: #555;
   text-decoration: none;
 }
 
 .club_info a:hover {
-  color: #6CB4EA;
+  color: #555;
   text-decoration: underline;
 }
 
 #leagues {
-  margin: 5px 0 20px 30px;
+  margin: 5px 10px;
 }
 
 .league {
   margin: 10px;
   height: 70px;
-  width: 235px;
+  width: 200px;
   float: left;
   border: 1px solid #BBB;
+  border-image: initial;
   padding: 7px;
 }
 
+.league:hover {
+	border: 1px solid #DDDDDD;
+}
+
 .league_name {
-  margin: 0 0 0 60px;
+  font-size: 14px;
+  margin: 0 0 0 78px;
+  padding: 5px 0 0 10px;
 }
 
 .league a, a:visited {
-  color: #BBB;
-  font-size: 20px;
-  font-weight: bold;
+  color: #000000;
+  font-size: 14px;
   text-decoration: none;
   margin: 5px 0 0 10px;
 }
 
 .league a:visited {
-  color: #BBB;
+  color: #000000;
 }
 
 .league a:hover {
-  color: #555;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .league_info{
@@ -192,25 +211,30 @@ font-family: arial, Helvetica,sans-serif;
 }
 
 .league_info a, a:visited {
-  color: #6CB4EA;
+  color: #000000;
   text-decoration: none;
 }
 
 .league_info a:hover {
-  color: #6CB4EA;
+  color: #000000;
   text-decoration: underline;
 }
 
 #matches {
-  margin: 5px 0 20px 30px;
+  margin: 5px 10px;
 }
 
 .matche {
-  margin: 10px;
-  height: 147px;
-  width: 230px;
-  float: left;
-  border: 1px solid #BBB;
+	margin: 9px;
+	height: 145px;
+	width: 215px;
+	float: left;
+	border: 1px solid #BBB;
+	border-image: initial;
+}
+
+.matche:hover {
+	border: 1px solid #DDDDDD;
 }
 
 .matche_name {
@@ -218,23 +242,25 @@ font-family: arial, Helvetica,sans-serif;
 }
 
 .matche a, a:visited {
-  color: #BBB;
-  font-size: 13px;
-  font-weight: bold;
+  color: #000000;
+  font-size: 14px;
   text-decoration: none;
   margin: 15px 0 0 10px;
 }
 
-.matche a:visited {
-  color: #BBB;
+.matche a:hover {
+  text-decoration: none;
 }
 
 .matche .vs {
-  width: 220px;
-  font-size:14px;
-  color: #BBB;
-  text-align: center;
-  font-weight:bold;
+	width: 220px;
+	font-size: 14px;
+	color: black;
+	text-align: center;
+	font-weight: bold;
+	position: relative;
+	top: -43px;
+	left: -7px;
 }
 
 .matche .link_container {
@@ -251,8 +277,8 @@ font-family: arial, Helvetica,sans-serif;
 }
 
 .matche a:hover {
-  color: grey;
-  text-decoration: underline;
+  color: #888888;
+  text-decoration: none;
 }
 
 #matche_info {
@@ -410,13 +436,11 @@ font-family: arial, Helvetica,sans-serif;
 }
 
 .bookmaker_name span{
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 14px;
 }
 
 .bookmaker a, a:visited {
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 14px;
   text-decoration: none;
   margin: 15px 0 0 10px;
 }

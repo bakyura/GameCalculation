@@ -13,10 +13,14 @@
 <body>
   <center>
     <div id="logo_block">
-      <a href="/">BetAssistantAdmin <span>DemoVersion</span></a>
+      <a href="/">
+        <img src="/images/logo.png" alt="bet assistant Alpha">
+        <span class="logo_demo">alpha</span>
+      </a>
+      
       <div id="login_block">
         <% if user_signed_in? %>
-          Signed in as <%= current_user.email %>.
+          Signed in as <b><%= current_user.email %></b>.
           <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "login" %>
         <% else %>
           <%= link_to "Sign up", new_user_registration_path, :class => "register" %> | <%= link_to "Sign in", new_user_session_path, :class => "login" %>
@@ -45,34 +49,35 @@
       <div class="item">
         <%= link_to "Setup", settings_path %>
       </div>
-    </div> 
-    <div id="backend_content">
-      <div id="submenu">
-        <div class="item">
-          <a href="/news">News</a>
-        </div>
-        <div class="item">
-          <a href="/pages">Pages</a>
-        </div>
-        <div class="item">
-          <a href="/countries_admin">Countries</a>
-        </div>
-        <div class="item">
-          <a href="/leagues_admin">Leagues</a>
-        </div>
-        <div class="item">
-          <a href="/football_clubs_admin">Clubs</a>
-        </div>
-        <div class="item">
-          <a href="/bookmakers_admin">Bookmakers</a>
-        </div>
-        <div class="item">
-          <a href="/tasks">Tasks</a>
-        </div>
-        <div class="item">
-          <a href="/tests">Tests</a>
-        </div>
+    </div>
+    <div id="submenu">
+      <div class="item">
+        <a href="/news">News</a>
       </div>
+      <div class="item">
+        <a href="/pages">Pages</a>
+      </div>
+      <div class="item">
+        <a href="/countries_admin">Countries</a>
+      </div>
+      <div class="item">
+        <a href="/leagues_admin">Leagues</a>
+      </div>
+      <div class="item">
+        <a href="/football_clubs_admin">Clubs</a>
+      </div>
+      <div class="item">
+        <a href="/bookmakers_admin">Bookmakers</a>
+      </div>
+      <div class="item">
+        <a href="/tasks">Tasks</a>
+      </div>
+      <div class="item">
+        <a href="/tests">Tests</a>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div id="backend_content">
       <div id="backend_wrapper">
         <%= yield %>
       </div>
@@ -83,7 +88,7 @@
         <a href="/news">News</a> | <a href="/supported_leagues">Leagues</a> | <a href="/assistant">Assistant</a> | <a href="/algoritms">Our Algoritms</a> | <a href="/services">Services</a> | <a href="/about">About</a>
       </div>
       <div class="copyright">
-        &copy; 2011 <b>BetAssistant</b>
+        &copy; 2011 <b>bet</b> assistant
       </div>  
     </div>
   </center>

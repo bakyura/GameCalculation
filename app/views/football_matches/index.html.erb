@@ -1,15 +1,12 @@
 <div id="matches">
   <div>
-    <div class="f_left">
-      <h1>Football Matches</h1>
-    </div>
     <div class="clear"></div>
     <div class="title">
       <div class="f_left">
-        <%= image_tag "/images/#{@league.logo}", :height => "85" %>
+        <%= image_tag "/images/#{@league.logo}", :height => "120px", :alt => "#{@league.name}" %>
       </div>
       <div class="name">
-        <%= @league.name %>
+        <%= @league.name.upcase %>
       </div>
       <div class="tour">
         <%= @tour %> tour

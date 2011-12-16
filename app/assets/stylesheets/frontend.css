@@ -1,45 +1,51 @@
 body {
   font-size: 12px;
-  background-color: silver;
+  background-color: #FFFFFF;
+  margin: 0px;
+  padding: 0px;
 }
 
 a, a:visited, a:hover {
-  color: #6CB4EA;
+  color: #000000;
 }
 
 #logo_block {
-    background-color: #E3E3E3;
-    color: #6CB4EA;
+    color: #000000;
     height: 56px;
-    width: 980px;
+    width: 960px;
     font-size: 45px;
-    padding: 10px;
-    font-weight: bold;
+    padding: 15px 10px 10px 10px;
     text-align: left;
     border-bottom: 1px solid silver;
 }
 
+.logo_demo{
+	font-size: 14px;
+	font-weight: lighter;
+	text-shadow: 1px 1px 1px #BBBBBB; 
+}
+
 #logo_block span {
     font-size: 25px;
-    color: #228B22;
+    color: #000000;
 }
 
 #logo_block a, a:hover, a:visited {
-    color: #6CB4EA;
+    color: #000000;
     text-decoration: none;
     cursor: pointer;
 }
 
 #main {
-    width: 1000px;
+    width: 960px;
     background-color: white;
-    border: 1px solid grey;
+    border: none;
 }
 
 #logos_row {
-    width: 1000px;
+    width: 960px;
     height: 100px;
-    margin: 0 0 10px 30px;
+    margin: 0px;
 }
 
 #logos_row .logo {
@@ -56,20 +62,21 @@ a, a:visited, a:hover {
 
 #login_block {
     float: right;
-    margin: 15px 10px 0 0;
-    font-size: 14px;
+    margin: 0px;
+	padding-top: 16px;
+    font-size: 15px;
 }
 
 #login_block a.login {
     cursor: pointer;
     text-decoration: none;
-    color: #6CB4EA;
+    color: #282828;
 }
 
 #login_block a.register {
     cursor: pointer;
     text-decoration: none;
-    color: #6CB4EA;
+    color: #282828;
 }
 
 #login_block a:hover {
@@ -77,40 +84,34 @@ a, a:visited, a:hover {
 }
 
 #frontend_menu {
-    height: 40px;
-    background-color: black;
-    padding: 7px;
-    border-top: 2px solid grey;
-    border-bottom: 2px solid grey;
-    margin-bottom: 20px;
+    width: 1000px;
+    height: 30px;
+    padding: 10px 0 0px 0px;
 }
 
 #frontend_menu .item {
-    padding-left: 60px;
     float: left;
+    margin: 0px 35px;
 }
 
 #frontend_menu .item a {
-    text-decoration: none;
     cursor: pointer;
-    color: white;
-    font-size: 25px;
-    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
 }
 
 #frontend_menu .item a:hover {
     text-decoration: underline;
-    color: white;
 }
 
 #slider {
-    width: 1000px; /* important to be same as image width */
+    width: 960px; /* important to be same as image width */
     height: 350px; /* important to be same as image height */
     position: relative; /* important */
     overflow: hidden; /* important */
 }
 #sliderContent {
-    width: 1000px; /* important to be same as image width or wider */
+    width: 960px; /* important to be same as image width or wider */
     position: absolute;
     top: -12px;
     left: -40px;
@@ -136,7 +137,7 @@ a, a:visited, a:hover {
 }
 
 .sliderImage img {
-    width: 1000px;
+    width: 960px;
     height: 350px;
 }
 
@@ -163,11 +164,10 @@ ul { list-style-type: none;}
 }
 
 #footer {
-  color: white;
-  background-color: black;
   padding: 5px;
-  width: 990px;
-  border: 1px solid grey;
+  margin: 10px 0px 0px 0px;
+  width: 960px;
+  border-top: 1px solid #BBBBBB;
 }
 
 #footer_menu a {
