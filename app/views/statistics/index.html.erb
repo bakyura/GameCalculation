@@ -10,9 +10,11 @@
       <% @prediction = Prediction.first(:conditions => {:game_id => matche.id}) %>
         <% unless @prediction.nil? %>
           <b class="black">Our forecast for the game:</b><br />
-          Win Team 1: <span class="stat_info_item_r1"><%= @prediction.win_home %>%</span><br />
+          <% full = @prediction.win_home.to_f + @prediction.win_quest.to_f %>
+          <% r1 = (@prediction.win_home.to_f * 100)/full %>
+          Win Team 1: <span class="stat_info_item_r1"><%= r1.round %>%</span><br />
           Draw: <span class="stat_info_item_rx"><%= @prediction.draw_result %>%</span><br />
-          Win Team 2: <span class="stat_info_item_r2"><%= @prediction.win_quest %>%</span><br />
+          Win Team 2: <span class="stat_info_item_r2"><%= (100-r1).round %>%</span><br />
           Possible game result: <span class="stat_info_item_r1"><%= @prediction.goals_home %>:<%= @prediction.goals_quest %></span><br />
           <% if @prediction.is_recommended %>
             <span class="stat_info_item_r2">We recommended this match for bet!</span>
@@ -61,9 +63,11 @@
       <% @prediction = Prediction.first(:conditions => {:game_id => matche.id}) %>
         <% unless @prediction.nil? %>
           <b class="black">Our forecast for the game:</b><br />
-          Win Team 1: <span class="stat_info_item_r1"><%= @prediction.win_home %>%</span><br />
+          <% full = @prediction.win_home.to_f + @prediction.win_quest.to_f %>
+          <% r1 = (@prediction.win_home.to_f * 100)/full %>
+          Win Team 1: <span class="stat_info_item_r1"><%= r1.round %>%</span><br />
           Draw: <span class="stat_info_item_rx"><%= @prediction.draw_result %>%</span><br />
-          Win Team 2: <span class="stat_info_item_r2"><%= @prediction.win_quest %>%</span><br />
+          Win Team 2: <span class="stat_info_item_r2"><%= (100-r1).round %>%</span><br />
           Possible game result: <span class="stat_info_item_r1"><%= @prediction.goals_home %>:<%= @prediction.goals_quest %></span><br />
           <% if @prediction.is_recommended %>
             <span class="stat_info_item_r2">We recommended this match for bet!</span>
@@ -112,9 +116,11 @@
       <% @prediction = Prediction.first(:conditions => {:game_id => matche.id}) %>
         <% unless @prediction.nil? %>
           <b class="black">Our forecast for the game:</b><br />
-          Win Team 1: <span class="stat_info_item_r1"><%= @prediction.win_home %>%</span><br />
+          <% full = @prediction.win_home.to_f + @prediction.win_quest.to_f %>
+          <% r1 = (@prediction.win_home.to_f * 100)/full %>
+          Win Team 1: <span class="stat_info_item_r1"><%= r1.round %>%</span><br />
           Draw: <span class="stat_info_item_rx"><%= @prediction.draw_result %>%</span><br />
-          Win Team 2: <span class="stat_info_item_r2"><%= @prediction.win_quest %>%</span><br />
+          Win Team 2: <span class="stat_info_item_r2"><%= (100-r1).round %>%</span><br />
           Possible game result: <span class="stat_info_item_r1"><%= @prediction.goals_home %>:<%= @prediction.goals_quest %></span><br />
           <% if @prediction.is_recommended %>
             <span class="stat_info_item_r2">We recommended this match for bet!</span>
