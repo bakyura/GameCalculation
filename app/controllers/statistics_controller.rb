@@ -1,5 +1,5 @@
 class StatisticsController < ApplicationController
-  before_filter :authenticate_user!
+  #before_filter :authenticate_user!
   
   layout "backend"
   
@@ -14,5 +14,8 @@ class StatisticsController < ApplicationController
     
     @tour2 = 16
     @matches2 = FootballMatch.find(:all, :conditions => { :tour => @tour2, :league => @league.id})
+    
+    @tour3 = 17
+    @matches3 = FootballMatch.find(:all, :conditions => { :tour => @tour3, :league => @league.id})
   end
 end 

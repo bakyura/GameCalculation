@@ -19,12 +19,14 @@
       </a>
       
       <div id="login_block">
+        <!--
         <% if user_signed_in? %>
           Signed in as <b><%= current_user.email %></b>.
           <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "login" %>
         <% else %>
           <%= link_to "Sign up", new_user_registration_path, :class => "register" %> | <%= link_to "Sign in", new_user_session_path, :class => "login" %>
         <% end %>
+        -->
       </div>
     </div>
     <div id="admin_menu">
