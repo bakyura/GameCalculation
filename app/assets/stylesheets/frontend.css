@@ -87,6 +87,7 @@ a, a:visited, a:hover {
     width: 1000px;
     height: 30px;
     padding: 10px 0 0px 0px;
+    margin-bottom: 30px;
 }
 
 #frontend_menu .item {
