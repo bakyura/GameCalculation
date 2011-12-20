@@ -1,7 +1,7 @@
 class StatisticsController < ApplicationController
   #before_filter :authenticate_user!
   
-  layout "backend"
+  layout "frontend"
   
   def index
     @league = League.first(:conditions => {:country => 'DEU'})

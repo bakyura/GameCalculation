@@ -19,7 +19,13 @@
       <div class="item">
         Web site: <%= link_to "#{@league.url}", "#{@league.url}", :target => "_blank" %>
       </div>
+      <% if @league.id == 1 %>
+        <div class="item">
+          Football Matches: <%= link_to "visit", football_matches_path %>
+        </div>
+      <% end %>
     </div>
+    
     <div "latest_news">
       <h3>Latest news</h3>
       <div>

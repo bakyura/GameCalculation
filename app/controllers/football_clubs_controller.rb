@@ -1,7 +1,7 @@
 class FootballClubsController < ApplicationController
   #before_filter :authenticate_user!
   
-  layout "backend"
+  layout "frontend"
 
   def index
     @clubs = FootballClub.find(:all)

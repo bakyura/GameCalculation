@@ -25,15 +25,12 @@
           <span class="logo_demo">alpha</span>
         </a>
         <div id="login_block">
-          <b><%= link_to "Backend Side", football_matches_path, :class => "login" %></b>
-          <!--
           <% if user_signed_in? %>
-            Signed in as <b><%= link_to "#{current_user.email}", football_matches_path, :class => "login" %></b>.
+            Signed in as <b><%= link_to "#{current_user.email}", "/news", :class => "login" %></b>.
             <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "login" %>
           <% else %>
-            <%= link_to "Sign up", new_user_registration_path, :class => "register" %> | <%= link_to "Sign in", new_user_session_path, :class => "login" %>
+            <!-- <%= link_to "Sign up", new_user_registration_path, :class => "register" %> | <%= link_to "Sign in", new_user_session_path, :class => "login" %> -->
           <% end %>
-          -->
         </div>
       </div>
       <%if request.path == "" %>
@@ -71,31 +68,40 @@
       <center>
       <div id="frontend_menu">
         <div class="item">
-          <a href="/news">News</a>
+          <a href="/last_news">News</a>
         </div>
         <div class="item">
-          <a href="/supported_leagues">Leagues</a>
+          <%= link_to "Leagues", leagues_path %>
         </div>
         <div class="item">
-          <a href="/assistant">Assistant</a>
+          <%= link_to "Football Clubs", football_clubs_path %>
         </div>
         <div class="item">
-          <a href="/algoritms">Our Algoritms</a>
+          <%= link_to "Matches", football_matches_path %>
         </div>
         <div class="item">
-          <a href="/services">Services</a>
+          <%= link_to "Bookmakers", bookmakers_path %>
+        </div>
+        <div class="item">
+          <%= link_to "Statistics", statistics_path %>
         </div>
         <div class="item">
           <a href="/about">About</a>
+        </div>
+        <div class="item">
+          <%= link_to "Setup", new_user_session_path %>          
         </div>
       </div>
       </center>
 
     </div>
-    <div id="content">
+    <div id="backend_content">
+      <div id="backend_wrapper">
       
-      <%= yield %>
-      
+        <%= yield %>
+        
+      </div>
+      <div class="clear"></div>
     </div>
     <div id="footer">
       <div id="footer_menu">
