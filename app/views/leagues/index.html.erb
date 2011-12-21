@@ -11,15 +11,17 @@
   </div>
   <div class="clear"></div>
   <% @leagues.each do |league| %>
-    <div class="league">
-      <a href=<%= "/leagues/#{league.id}" %> >
-        <div class="f_left">
-          <%= image_tag "/images/#{league.logo}", :height => "70" %>
-        </div>
-        <div class="league_name">
-          <%= "#{league.name}" %>
-        </div>
-      </a>
-    </div>
+    <% unless league.name.nil? %>
+      <div class="league">
+        <a href=<%= "/leagues/#{league.id}" %> >
+          <div class="f_left">
+            <%= image_tag "/images/#{league.logo}", :height => "70" %>
+          </div>
+          <div class="league_name">
+            <%= "#{league.name}" %>
+          </div>
+        </a>
+      </div>
+    <% end %>
   <% end %>
 </div>
