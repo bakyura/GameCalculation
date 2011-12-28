@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111226085317) do
+ActiveRecord::Schema.define(:version => 20111228121650) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                             :default => "", :null => false
@@ -166,6 +166,17 @@ ActiveRecord::Schema.define(:version => 20111226085317) do
     t.string   "value"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "social_communications", :force => true do |t|
+    t.integer  "club_id"
+    t.string   "rss"
+    t.string   "facebook"
+    t.string   "twitter"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "youtube"
+    t.string   "google_plus"
   end
 
   create_table "statistics", :force => true do |t|
