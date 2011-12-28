@@ -5,7 +5,7 @@ gem 'rails', '3.1.0'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2', '0.3.11'
+gem 'mysql2'
 
 
 # Gems used only for assets and not required
@@ -29,6 +29,8 @@ gem 'active_scaffold_vho', :git => 'git://github.com/vhochstein/active_scaffold.
 gem "devise", :git => 'git://github.com/plataformatec/devise.git'
 
 gem "will_paginate"
+
+gem "nokogiri"
 
 # Use unicorn as the web server
 # gem 'unicorn'

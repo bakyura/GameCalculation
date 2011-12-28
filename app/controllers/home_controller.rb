@@ -2,6 +2,7 @@ class HomeController < ActionController::Base
 
   layout "frontend"
   require 'rss'
+  require 'nokogiri'
 
   def index
   end

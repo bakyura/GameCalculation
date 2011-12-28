@@ -1,12 +1,14 @@
 <% @rss.items.each do |item| %>
   <div>
     <div style="float: left; margin: 5px;">
-      <img src="/images/logo/ger.jpeg" height="70px" />
+      <% doc = Nokogiri::HTML(open(item.link)) %>
+      <% img = doc.at_css("div#area_artikelbild_ng img")['src'] %>
+      <%== "<img src='http://www.bundesliga.de#{img}' width='110px;' />" %>
     </div>
     <div>
       <span>BUNDESLIGA</span><br />
       <span><%= item.pubDate.to_s[0..15] %></span><br />
-      <a href="<%== item.link %>"><%== item.title %></a><br />
+      <a href="<%== item.link %>" target="_blank" ><%== item.title %></a><br />
       <span><%== item.description %></span>
     </div>
   </div>
