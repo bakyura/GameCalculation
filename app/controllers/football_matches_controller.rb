@@ -1,5 +1,6 @@
 class FootballMatchesController < ApplicationController
   #before_filter :authenticate_user!
+  require 'rss'
   
   layout "frontend"
 
@@ -19,5 +20,14 @@ class FootballMatchesController < ApplicationController
     @will_hill = Bookmaker.first(:conditions => {:name => 'WillHill'})
     @bet_365 = Bookmaker.first(:conditions => {:name => 'Bet365'})
     @unibet = Bookmaker.first(:conditions => {:name => 'Unibet'})
+    
+    @social1 = SocialCommunication.first(:conditions => {:club_id => @team1.id})
+    @social2 = SocialCommunication.first(:conditions => {:club_id => @team2.id})
+    
+    @rss1 = nil
+    @rss1 = RSS::Parser.parse(open(@social1.rss).read, false) unless @social1.rss.nil?
+    
+    @rss2 = nil
+    @rss2 = RSS::Parser.parse(open(@social2.rss).read, false) unless @social2.rss.nil?
   end
 end
