@@ -32,6 +32,8 @@ gem "will_paginate"
 
 gem "nokogiri"
 
+gem "barometer"
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

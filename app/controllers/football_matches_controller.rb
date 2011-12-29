@@ -29,5 +29,10 @@ class FootballMatchesController < ApplicationController
     
     @rss2 = nil
     @rss2 = RSS::Parser.parse(open(@social2.rss).read, false) unless @social2.rss.nil?
+    
+    barometer = Barometer.new(@team1.location)
+    @weather = barometer.measure
+    @fame_day_weather = @weather.for(@matche.game_date.to_date)
+    @fame_day_weather = @fame_day_weather.high.c unless @fame_day_weather.nil?
   end
 end
