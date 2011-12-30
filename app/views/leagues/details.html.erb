@@ -24,12 +24,49 @@
           Football Matches: <%= link_to "visit", football_matches_path %>
         </div>
       <% end %>
+      <div class="item">
+        Social Network:
+        <% unless @social.rss.nil? %>
+          <a href="<%= @social.rss %>" target="_blank">
+            <%= image_tag("/images/social/feed.jpg", :border => "0", :alt => "RSS") %>
+          </a>
+        <% end %>
+        <% unless @social.facebook.nil? %>
+          <a href="<%= @social.facebook %>" target="_blank">
+            <%= image_tag("/images/social/facebook.jpg", :alt => "Facebook") %>
+          </a>
+        <% end %>
+        <% unless @social.twitter.nil? %>
+          <a href="<%= @social.twitter %>" target="_blank">
+            <%= image_tag("/images/social/twitter.jpg", :alt => "Twitter") %>
+          </a>
+        <% end %>
+        <% unless @social.youtube.nil? %>
+          <a href="<%= @social.youtube %>" target="_blank">
+            <%= image_tag("/images/social/youtube.jpg", :alt => "YouTube") %>
+          </a>
+        <% end %>
+        <% unless @social.google_plus.nil? %>
+          <a href="<%= @social.google_plus %>" target="_blank">
+            <%= image_tag("/images/social/gplus-16.png", :alt => "Google+") %>
+          </a>
+        <% end %>
+      </div>
     </div>
-    
     <div "latest_news">
-      <h3>Latest news</h3>
-      <div>
-        <span style="silver">Coming soon</span>
+      <h2>Latest news</h2>
+      <div style="margin-left: 10px; width: 500px;">
+        <% unless @rss.nil? %>
+          <% @rss.items.each do |item| %>
+            <div style="margin-bottom: 7px;">
+              <span><%= item.pubDate.to_s[0..15] %></span><br />
+              <a href="<%== item.link %>" target="_blank" ><%== item.title %></a><br />
+              <span><%== item.description %></span>
+            </div>
+          <% end %>
+        <% else %>
+          <span style="silver">Coming soon</span>
+        <% end %>
       </div>
     </div>
   </div>
