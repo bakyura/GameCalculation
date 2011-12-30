@@ -26,12 +26,12 @@
         Social Network:
         <% unless @social.rss.nil? %>
           <a href="<%= @social.rss %>" target="_blank">
-            <%= image_tag("/images/social/facebook.jpg", :border => "0", :alt => "RSS") %>
+            <%= image_tag("/images/social/feed.jpg", :border => "0", :alt => "RSS") %>
           </a>
         <% end %>
         <% unless @social.facebook.nil? %>
           <a href="<%= @social.facebook %>" target="_blank">
-            <%= image_tag("/images/social/feed.jpg", :alt => "Facebook") %>
+            <%= image_tag("/images/social/facebook.jpg", :alt => "Facebook") %>
           </a>
         <% end %>
         <% unless @social.twitter.nil? %>
