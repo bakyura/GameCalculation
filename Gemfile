@@ -43,17 +43,17 @@ gem "barometer"
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-group :development do
-  gem 'rspec'
-  gem 'cucumber'
-  gem 'capybara'
-end
+# Testing
+gem 'rspec', :group => [:development, :test]
+gem 'rspec-rails', :group => [:development, :test]
+gem 'cucumber-rails', :group => [:development, :test]
+gem 'capybara', :group => [:development, :test]
+gem 'factory_girl_rails', :group => [:development, :test]
+gem 'watchr', :group => [:development, :test]
+gem 'spork', :group => [:development, :test]
+
 
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
-  
-  gem 'rspec'
-  gem 'cucumber'
-  gem 'capybara'
 end

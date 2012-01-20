@@ -4,7 +4,7 @@
   <title>BetAssistantDemo Backend</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
-  <% if controller.controller_name ==  'bookmakers_admin' || controller.controller_name == 'settings' || controller.controller_name == 'news' || controller.controller_name == 'pages' || controller.controller_name == 'football_clubs_admin' || controller.controller_name == 'leagues_admin' || controller.controller_name == 'tests' || controller.controller_name == 'tasks' || controller.controller_name == 'countries_admin' %>
+  <% if controller.controller_name ==  'bookmakers_admin' || controller.controller_name == 'settings' || controller.controller_name == 'news' || controller.controller_name == 'pages' || controller.controller_name == 'football_clubs_admin' || controller.controller_name == 'leagues_admin' || controller.controller_name == 'background_tests' || controller.controller_name == 'tasks' || controller.controller_name == 'countries_admin' %>
     <%= stylesheet_link_tag :active_scaffold %>
     <%= javascript_include_tag :active_scaffold %>
   <% end %>
@@ -50,7 +50,7 @@
         <a href="/tasks">Tasks</a>
       </div>
       <div class="item">
-        <a href="/tests">Tests</a>
+        <a href="/background_tests">Tests</a>
       </div>
     </div>
     <div class="clear"></div>

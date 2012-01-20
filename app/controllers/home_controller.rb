@@ -8,7 +8,7 @@ class HomeController < ActionController::Base
   end
   
   def news
-    @rss = RSS::Parser.parse(open('http://www.bundesliga.com/rss/en/liga/rss_news.xml').read, false)
+    @rss = RSS::Parser.parse(open('http://www.bundesliga.com/rss/en/liga/rss_news.xml').read, false) rescue nil
   end
 
   def supported_leagues

@@ -15,6 +15,8 @@ class FootballClubsController < ApplicationController
     @social = SocialCommunication.first(:conditions => {:club_id => @club.id})
     
     @rss = nil
-    @rss = RSS::Parser.parse(open(@social.rss).read, false) unless @social.rss.nil?
+    unless @social.rss.nil?
+      @rss = RSS::Parser.parse(open(@social.rss).read, false) rescue nil
+    end
   end
 end

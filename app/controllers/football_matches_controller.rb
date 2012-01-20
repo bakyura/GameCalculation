@@ -25,10 +25,14 @@ class FootballMatchesController < ApplicationController
     @social2 = SocialCommunication.first(:conditions => {:club_id => @team2.id})
     
     @rss1 = nil
-    @rss1 = RSS::Parser.parse(open(@social1.rss).read, false) unless @social1.rss.nil?
+    unless @social1.rss.nil?
+        @rss1 = RSS::Parser.parse(open(@social1.rss).read, false) rescue nil
+    end
     
     @rss2 = nil
-    @rss2 = RSS::Parser.parse(open(@social2.rss).read, false) unless @social2.rss.nil?
+    unless @social2.rss.nil?
+      @rss2 = RSS::Parser.parse(open(@social2.rss).read, false) rescue nil
+    end
     
     barometer = Barometer.new(@team1.location)
     @weather = barometer.measure

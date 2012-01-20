@@ -56,7 +56,7 @@ GamecalculationDemo::Application.routes.draw do
     as_routes
   end
   
-  resources :tests do
+  resources :background_tests do
     as_routes
   end
   
