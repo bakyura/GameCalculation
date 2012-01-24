@@ -467,6 +467,11 @@ h1 {
   margin: 5px 0 20px 30px;
 }
 
+.sum_stat_row {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
 #stat_info {
   margin-left: 50px;
 }
@@ -483,6 +488,15 @@ h1 {
   border-right: 1px dashed #BBB;
   padding-right: 10px;
   margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.stat_info_item_main {
+  font-size: 14px;
+  font-weight: bold;
+  padding-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 20px;
 }
 
 .stat_info_item_r1 {

@@ -17,5 +17,8 @@ class StatisticsController < ApplicationController
     
     @tour3 = 17
     @matches3 = FootballMatch.find(:all, :conditions => { :tour => @tour3, :league => @league.id})
+    
+    @tour4 = 18
+    @matches4 = FootballMatch.find(:all, :conditions => { :tour => @tour4, :league => @league.id})
   end
 end 
