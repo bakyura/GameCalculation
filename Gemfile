@@ -34,8 +34,7 @@ gem "devise", :git => 'git://github.com/plataformatec/devise.git'
 
 gem "will_paginate"
 
-source 'http://rubygems.org'
-gem 'nokogiri', "1.5", :git => 'git://github.com/ender672/nokogiri.git'
+gem 'nokogiri'
 
 gem "barometer"
 

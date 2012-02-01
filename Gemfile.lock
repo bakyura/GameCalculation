@@ -7,12 +7,6 @@ GIT
       activesupport (>= 3.0.0, < 3.2.0)
 
 GIT
-  remote: git://github.com/ender672/nokogiri.git
-  revision: 766db38e9d4d9cd164ccf0b21968ee07f82c25b1
-  specs:
-    nokogiri (1.5)
-
-GIT
   remote: git://github.com/plataformatec/devise.git
   revision: 7693173ecd7f9b4198fafabafa3bdced7fab16d3
   specs:
@@ -45,7 +39,6 @@ GIT
       railties (~> 3.1.0)
 
 GEM
-  remote: http://rubygems.org/
   remote: http://rubygems.org/
   specs:
     actionmailer (3.1.0)
@@ -131,8 +124,6 @@ GEM
     ffi (1.0.11)
     gherkin (2.7.2)
       json (>= 1.4.6)
-    gherkin (2.7.2)
-      json (>= 1.4.6)
     highline (1.6.11)
     hike (1.2.1)
     httparty (0.8.1)
@@ -155,6 +146,7 @@ GEM
     net-ssh (2.3.0)
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
+    nokogiri (1.5.0)
     orm_adapter (0.0.5)
     passenger (3.0.11)
       daemon_controller (>= 0.2.5)
@@ -252,7 +244,7 @@ DEPENDENCIES
   factory_girl_rails
   jquery-rails_vho!
   mysql2
-  nokogiri (= 1.5)!
+  nokogiri
   passenger
   rails (= 3.1.0)
   render_component_vho!
