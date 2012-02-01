@@ -16,6 +16,11 @@ GIT
       warden (~> 1.1)
 
 GIT
+  remote: git://github.com/tenderlove/nokogiri.git
+  revision: d48af8ba85bdefdd1cfe1efae2f13c87696c1bfd
+  specs:
+
+GIT
   remote: git://github.com/vhochstein/active_scaffold.git
   revision: 87d0ef321cfa48f9a4ea364b6a544450822e35d1
   specs:
@@ -122,6 +127,8 @@ GEM
       railties (>= 3.0.0)
     fastthread (1.0.7)
     ffi (1.0.11)
+    gherkin (2.7.2)
+      json (>= 1.4.6)
     gherkin (2.7.2)
       json (>= 1.4.6)
     highline (1.6.11)
@@ -244,7 +251,7 @@ DEPENDENCIES
   factory_girl_rails
   jquery-rails_vho!
   mysql2
-  nokogiri
+  nokogiri!
   passenger
   rails (= 3.1.0)
   render_component_vho!

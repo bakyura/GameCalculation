@@ -34,7 +34,7 @@ gem "devise", :git => 'git://github.com/plataformatec/devise.git'
 
 gem "will_paginate"
 
-gem "nokogiri"
+gem "nokogiri", :git => "git://github.com/tenderlove/nokogiri.git"
 
 gem "barometer"
 
