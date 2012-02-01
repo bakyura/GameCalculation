@@ -5,7 +5,7 @@ gem 'rails', '3.1.0'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2', '0.3.11'
+gem 'mysql2'
 
 
 # Gems used only for assets and not required
@@ -17,6 +17,10 @@ group :assets do
 end
 
 #gem 'jquery-rails'
+
+gem 'execjs'
+
+#gem "therubyracer", :require => 'v8', :group => [:production]
 
 gem 'jquery-rails_vho', :git => 'git://github.com/vhochstein/jquery-rails.git'
 
@@ -35,11 +39,15 @@ gem "nokogiri"
 gem "barometer"
 
 # Use unicorn as the web server
-# gem 'unicorn'
+#gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+group :development do
+  gem 'capistrano'
+end
 
+ gem 'passenger'
+ 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
