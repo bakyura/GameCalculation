@@ -3,15 +3,8 @@
 # for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
 require File.expand_path('../config/application', __FILE__)
 
-module ::GamecalculationDemo
-  class Application
-    include Rake::DSL
-  end
-end
-
-module ::RakeFileUtils
-  extend Rake::FileUtilsExt
-end
+require 'rake/dsl_definition'
+include Rake::DSL
 
 GamecalculationDemo::Application.load_tasks
 
