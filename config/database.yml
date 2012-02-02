@@ -7,8 +7,8 @@ defaults: &defaults
 
 login_prod: &login_prod
   adapter: mysql2
-  username: ubet_prod
-  password: TSG1899Hoffenheim
+  username: root
+  password: 
   host: localhost
   database: bet_assist_prod
 
