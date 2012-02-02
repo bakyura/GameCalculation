@@ -6,7 +6,7 @@
         <% image = doc.at_css("div#area_artikelbild_ng img") %>
         <% img = nil %>
         <% img = image['src'] unless image.nil? %>
-        <% unless img.nil?>
+        <% unless img.nil? %>
           <%== "<img src='http://www.bundesliga.de#{img}' width='110px;' />" %>
         <% end %>
       </div>
