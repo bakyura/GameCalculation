@@ -26,10 +26,10 @@ login_test: &login_test
 
   
 development:
-  #<<: *login_prod
-  <<: *defaults
-  #database: bet_assist_dev
-  database: gamecalc_dev
+  <<: *login_prod
+  #<<: *defaults
+  database: bet_assist_dev
+  #database: gamecalc_dev
   
 
 # Warning: The database defined as "test" will be erased and
@@ -41,10 +41,10 @@ test: &test
   database: gamecalc_test
 
 production:
-  #<<: *login_prod
-  <<: *defaults
-  #database: bet_assist_prod
-  database: gamecalc_prod
+  <<: *login_prod
+  #<<: *defaults
+  database: bet_assist_prod
+  #database: gamecalc_prod
 
 cucumber:
   <<: *test
