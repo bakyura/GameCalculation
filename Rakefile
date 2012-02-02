@@ -5,14 +5,8 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-module ::GamecalculationDemo
-  class Application
-    include Rake::DSL
-  end
-end
-
-module ::RakeFileUtils
-  extend Rake::FileUtilsExt
+class Application
+  include Rake::DSL
 end
 
 GamecalculationDemo::Application.load_tasks
