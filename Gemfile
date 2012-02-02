@@ -66,4 +66,3 @@ group :test do
   gem 'turn', :require => false
 end
 
-gem 'rake', "0.8.7"
