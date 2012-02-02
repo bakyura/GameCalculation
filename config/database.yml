@@ -2,7 +2,7 @@
 defaults: &defaults
   adapter: mysql2
   username: root
-  password: 12345678
+  password: "12345678"
   host: localhost
 
 login_prod: &login_prod
