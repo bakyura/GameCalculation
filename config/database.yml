@@ -1,35 +1,35 @@
 
 defaults: &defaults
-  adapter: mysql
+  adapter: mysql2
   username: root
   password: 12345678
   host: localhost
 
 login_prod: &login_prod
-  adapter: mysql
+  adapter: mysql2
   username: bet_assist_prod
   password: TSG1899Hoffenheim
   host: localhost
   database: bet_assist_prod
 
 login_dev: &login_dev
-  adapter: mysql
+  adapter: mysql2
   username: bet_assist_dev
   password: TSG1899HoffenheimDev
   host: localhost
 
 login_test: &login_test
-  adapter: mysql
+  adapter: mysql2
   username: bet_assist_test
   password: TSG1899HoffenheimTest
   host: localhost
 
   
 development:
-  <<: *login_prod
-  #<<: *defaults
-  database: bet_assist_dev
-  #database: gamecalc_dev
+  #<<: *login_prod
+  <<: *defaults
+  #database: bet_assist_dev
+  database: gamecalc_dev
   
 
 # Warning: The database defined as "test" will be erased and
@@ -37,14 +37,14 @@ development:
 # Do not set this db to the same as development or production.
 test: &test
   <<: *defaults
-  database: bet_assist_test
-  #database: gamecalc_test
+  #database: bet_assist_test
+  database: gamecalc_test
 
 production:
-  <<: *login_prod
-  #<<: *defaults
-  database: bet_assist_prod
-  #database: gamecalc_prod
+  #<<: *login_prod
+  <<: *defaults
+  #database: bet_assist_prod
+  database: gamecalc_prod
 
 cucumber:
   <<: *test
