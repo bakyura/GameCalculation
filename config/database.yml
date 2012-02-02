@@ -7,20 +7,20 @@ defaults: &defaults
 
 login_prod: &login_prod
   adapter: mysql2
-  username: bet_assist_prod
+  username: ubet_prod
   password: TSG1899Hoffenheim
   host: localhost
   database: bet_assist_prod
 
 login_dev: &login_dev
   adapter: mysql2
-  username: bet_assist_dev
+  username: ubet_dev
   password: TSG1899HoffenheimDev
   host: localhost
 
 login_test: &login_test
   adapter: mysql2
-  username: bet_assist_test
+  username: ubet_test
   password: TSG1899HoffenheimTest
   host: localhost
 
