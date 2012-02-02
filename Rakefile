@@ -5,7 +5,7 @@
 require 'rake/dsl_definition'
 require 'rake'
  
-require File.expand_path('../config/application', __FILE__)
+#require File.expand_path('../config/application', __FILE__)
 
 include Rake::DSL
 
