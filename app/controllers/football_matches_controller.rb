@@ -5,7 +5,7 @@ class FootballMatchesController < ApplicationController
   layout "frontend"
 
   def index
-    @tour = 20
+    @tour = 21
     @league = League.first(:conditions => {:country => 'DEU'})
     @matches = FootballMatch.find(:all, :conditions => { :tour => @tour, :league => @league.id})
   end
