@@ -1,12 +1,63 @@
 <div id="statistic">
   <h1><%= @league.name %></h1>
   <h2>Summary statistics</h2>
-  <div class="sum_stat_row">Match recomended matches score: <b>3/15</b>(20.00%)</div>
-  <div class="sum_stat_row">Match recomended matches result: <b>10/15</b>(66.67%)</div>
-  <div class="sum_stat_row">Match matches score: <b>7/99</b>(7.01%)</div>
-  <div class="sum_stat_row">Match matches result: <b>50/99</b>(50.51%)</div>
+  <div class="sum_stat_row">Match recomended matches score: <b>3/17</b>(17.65%)</div>
+  <div class="sum_stat_row">Match recomended matches result: <b>12/17</b>(70.59%)</div>
+  <div class="sum_stat_row">Match matches score: <b>7/108</b>(6.48%)</div>
+  <div class="sum_stat_row">Match matches result: <b>54/108</b>(50.00%)</div>
   <br />
   <h2>Detailed statistics</h2>
+  <h2>Previous <%= @tour12 %> tour</h2>
+  <% @matches12.each do |matche|%>
+    <% @team1 = FootballClub.find_by_id matche.home_team %>
+    <% @team2 = FootballClub.find_by_id matche.quest_team %>
+    <h3><b class="black"><%= @team1.name %> - <%= @team2.name %> <%= matche.home_goals %> : <%= matche.quest_goals %></b></h3>
+    <div id="stat_info">
+      <div class="stat_info_item_main">
+      <% @prediction = Prediction.first(:conditions => {:game_id => matche.id}) %>
+        <% unless @prediction.nil? %>
+          <b class="black">Our forecast for the game:</b><br />
+          Win Team 1: <span class="stat_info_item_r1"><%= @prediction.win_home %>%</span><br />
+          Draw: <span class="stat_info_item_rx"><%= @prediction.draw_result %>%</span><br />
+          Win Team 2: <span class="stat_info_item_r2"><%= @prediction.win_quest %>%</span><br />
+          Possible game result: <span class="stat_info_item_r1"><%= @prediction.goals_home %>:<%= @prediction.goals_quest %></span><br />
+          <% if @prediction.is_recommended %>
+            <span class="stat_info_item_r2">We recommended this match for bet!</span>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="stat_info_item">
+      <% @prediction = BettingPrediction.first(:conditions => {:game_id => matche.id, :bookmaker_id => @will_hill.id}) %>
+        <% unless @prediction.nil? %>
+          <b class="black">WillHill</b><br />
+            Win Team 1: <span class="stat_info_item_r1"><%= @prediction.r_1 %></span><br />
+            Draw: <span class="stat_info_item_rx"><%= @prediction.r_x %></span><br />
+            Win Team 2: <span class="stat_info_item_r2"><%= @prediction.r_2 %></span><br />
+        <% end %>
+      </div>
+      <div class="stat_info_item">
+        <% @prediction = BettingPrediction.first(:conditions => {:game_id => matche.id, :bookmaker_id => @bet_365.id}) %>
+        <% unless @prediction.nil? %>
+          <b class="black">Bet365</b><br />
+          Win Team 1: <span class="stat_info_item_r1"><%= @prediction.r_1 %></span><br />
+          Draw: <span class="stat_info_item_rx"><%= @prediction.r_x %></span><br />
+          Win Team 2: <span class="stat_info_item_r2"><%= @prediction.r_2 %></span><br />
+        <% end%>
+      </div>
+      <div class="stat_info_item">
+        <% @prediction = BettingPrediction.first(:conditions => {:game_id => matche.id, :bookmaker_id => @unibet.id}) %>
+        <% unless @prediction.nil? %>
+          <b class="black">Unibet</b><br />
+          Win Team 1: <span class="stat_info_item_r1"><%= @prediction.r_1 %></span><br />
+          Draw: <span class="stat_info_item_rx"><%= @prediction.r_x %></span><br />
+          Win Team 2: <span class="stat_info_item_r2"><%= @prediction.r_2 %></span><br />
+        <% end %>  
+      </div>
+      <div class="clear"></div>
+    </div>
+  <% end %>
+  <br />
+  <br />
   <h2>Previous <%= @tour11 %> tour</h2>
   <% @matches11.each do |matche|%>
     <% @team1 = FootballClub.find_by_id matche.home_team %>
