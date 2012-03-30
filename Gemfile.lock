@@ -122,6 +122,9 @@ GEM
       railties (>= 3.0.0)
     fastthread (1.0.7)
     ffi (1.0.11)
+    gem_plugin (0.2.3)
+    gherkin (2.7.2)
+      json (>= 1.4.6)
     gherkin (2.7.2)
       json (>= 1.4.6)
     highline (1.6.11)
@@ -136,6 +139,8 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.17.2)
+    mongrel (1.2.0.pre2)
+      gem_plugin (~> 0.2.3)
     multi_json (1.0.4)
     multi_xml (0.4.1)
     mysql2 (0.3.11)
@@ -243,6 +248,7 @@ DEPENDENCIES
   execjs
   factory_girl_rails
   jquery-rails_vho!
+  mongrel (= 1.2.0.pre2)
   mysql2
   nokogiri (~> 1.5.0)
   passenger

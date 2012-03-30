@@ -46,7 +46,9 @@ group :development do
   gem 'capistrano'
 end
 
- gem 'passenger'
+gem 'passenger'
+
+gem "mongrel", "1.2.0.pre2"
  
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
