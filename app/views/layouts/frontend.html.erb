@@ -20,15 +20,6 @@
 </script>
 </head>
 <body>
-  <%if request.path == "" %>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('#slider').s3Slider({
-          timeOut: 3000
-        });
-      });
-    </script>
-  <% end %>
   <center>
   <div id="main">
     <div id="header">
@@ -40,69 +31,25 @@
         <div id="login_block">
           <% if user_signed_in? %>
             Signed in as <b><%= link_to "#{current_user.email}", "/news", :class => "login" %></b>.
-            <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "login" %>
+            <%= link_to "Log out", destroy_user_session_path, :method => :delete, :class => "login" %>
           <% else %>
-            <!-- <%= link_to "Sign up", new_user_registration_path, :class => "register" %> | <%= link_to "Sign in", new_user_session_path, :class => "login" %> -->
+            <!-- <%= link_to "Sign up", new_user_registration_path, :class => "register" %> | --> <%= link_to "Log in", new_user_session_path, :class => "login" %>
           <% end %>
         </div>
       </div>
-      <%if request.path == "" %>
-        <div id="slider">
-          <ul id="sliderContent">
-            <li class="sliderImage">
-                  <a href=""><img src="/images/home/ger3.jpg" alt="1" /></a>
-                  <span class="top"><strong>Bundes League</strong></span>
-              </li>
-              <li class="sliderImage">
-                  <a href=""><img src="/images/home/eng2.jpg" alt="2" /></a>
-                  <span class="top"><strong>Premier League</strong></span>
-              </li>
-              <li class="sliderImage">
-                  <img src="/images/home/spa1.jpg" alt="4" />
-                  <span class="bottom"><strong>Primera</strong></span>
-              </li>
-              <li class="sliderImage">
-                  <img src="/images/home/ita5.jpg" alt="5" />
-                  <span class="top"><strong>Serie A</strong></span>
-              </li>
-              <li class="sliderImage">
-                  <img src="/images/home/fra5.jpg" alt="3" />
-                  <span class="bottom"><strong>League 1</strong></span>
-              </li>
-              <li class="sliderImage">
-                  <img src="/images/home/ned4.jpg" alt="5" />
-                  <span class="top"><strong>Eredivisie</strong></span>
-              </li>
-              <div class="clear sliderImage"></div>
-          </ul>
-        </div>
-        <!-- // slider -->
-      <% end %>
       <center>
       <div id="frontend_menu">
         <div class="item">
-          <a href="/last_news">News</a>
-        </div>
-        <div class="item">
-          <%= link_to "Leagues", leagues_path %>
-        </div>
-        <div class="item">
-          <%= link_to "Football Clubs", football_clubs_path %>
-        </div>
-        <div class="item">
-          <%= link_to "Matches", football_matches_path %>
-        </div>
-        <div class="item">
-          <%= link_to "Bookmakers", bookmakers_path %>
+          <a href="/about">About</a>
         </div>
         <div class="item">
           <%= link_to "Statistics", statistics_path %>
         </div>
         <div class="item">
-          <a href="/about">About</a>
+          <a href="/bettings_strategy">Bettings strategy</a>
         </div>
         <div class="item">
-          <%= link_to "Setup", new_user_session_path %>          
+          <a href="/predictions">Predictions</a>
         </div>
       </div>
       </center>
@@ -118,7 +65,7 @@
     </div>
     <div id="footer">
       <div id="footer_menu">
-        <a href="/last_news">News</a> | <a href="/leagues">Leagues</a> | <a href="/football_clubs">Football Clubs</a> | <a href="/football_matches">Matches</a> | <a href="/bookmakers">Bookmakers</a> | <a href="/statistics">Statistics</a>  | <a href="/about">About</a>
+        <a href="/predictions">Predictions</a> | <a href="/bettings_strategy">Betting strategy</a> | <a href="/statistics">Statistics</a>  | <a href="/about">About</a>
       </div>
       <div class="copyright">
         &copy; 2011 <b>bet</b> assistant

@@ -1,0 +1,84 @@
+<div id="logos_row">
+  <div class="logo">
+    <a href="/leagues/1"><img src="/images/logo/ger.jpeg" /></a>
+  </div>
+  <div class="logo">
+    <img src="/images/logo/eng_grey.jpeg" />
+  </div>
+  <div class="logo">
+    <img src="/images/logo/spa_grey.jpeg" />
+  </div>
+  <div class="logo">
+    <img src="/images/logo/ita_grey.jpeg" />
+  </div>
+  <div class="logo">
+    <img src="/images/logo/fra_grey.jpeg" />
+  </div>
+  <div class="logo">
+    <img src="/images/logo/por_grey.jpeg" />
+  </div>
+  <div class="logo">
+    <img src="/images/logo/ned_grey.jpeg" />
+  </div>
+  <div class="logo">
+    <img src="/images/logo/bel_grey.jpeg" />
+  </div>
+  <div class="logo">
+    <img src="/images/logo/swi_grey.jpeg" />
+  </div>
+</div>
+<div class="maint-content-top">
+  <div class="video-conteiner">
+    <div class="video">
+      <iframe src="http://player.vimeo.com/video/11692156?title=0&amp;byline=0&amp;portrait=0" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><p><a href="http://vimeo.com/11692156">Adidas - Fast Vs. Fast</a> from <a href="http://vimeo.com/user2130461">Gary Shore</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+    </div>
+    <div class="uero">
+      <div class="header">UERO 2012</div>
+      <div class="item">EURO 2012 in Poland & Ukraine</div>
+    </div>
+  </div>
+  <div class="news">
+    <% unless @rss.nil? %>
+      <% @i = 0 %>
+      <% @rss.items.each do |item| %>
+        <% break if @i == 4 %>
+        <% @i = @i+1; %>
+        <div>
+          <div style="float: left; margin: 5px;">
+            <% doc = Nokogiri::HTML(open(item.link)) %>
+            <% image = doc.at_css("div#area_artikelbild_ng img") %>
+            <% img = nil %>
+            <% img = image['src'] unless image.nil? %>
+            <% unless img.nil? %>
+              <%== "<img src='http://www.bundesliga.de#{img}' width='110px;' />" %>
+            <% end %>
+          </div>
+          <div>
+            <span>BUNDESLIGA</span><br />
+            <span><%= item.pubDate.to_s[0..15] %></span><br />
+            <a href="<%== item.link %>" target="_blank" ><%== item.title %></a><br />
+            <span><%== item.description %></span>
+          </div>
+         </div>
+        <br /><br />
+      <% end %>
+    <% end %>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="maint-content-bottom">
+  <div class="left">
+    <div class="header">Bet Assistant can:</div>
+    <div class="item">- Predict results of upcoming matches</div>
+    <div class="item">- Build your betting strategy</div>
+    <div class="item">- Adjust the odds according to latest news</div>
+    <div class="item">- Constantly learn and improve predictions</div>
+  </div>
+  <div class="right">
+    <div class="header">Algorithm</div>
+    <div class="item">Suggests matches to bet on with probability over 75%</div>
+    <div class="item">Uses the statistics of all previous matches.</div>
+    <div class="item">Uses neuron-linguistic programing to learn and increase accuracy</div>
+    <div class="item">Automatically adjusts the odds according to latest news</div>
+  </div>
+</div>

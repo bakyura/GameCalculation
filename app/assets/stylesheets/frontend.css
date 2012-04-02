@@ -50,14 +50,14 @@ a, a:visited, a:hover {
 
 #logos_row .logo {
     float: left;
-    height: 100px;
-    width: 120px;
-    margin-left: 30px;
+    height: 90px;
+    width: 100px;
+    margin-left: 5px;
+    text-align: center;
 }
 
 #logos_row .logo img{
-    width: 120px;
-    height: 100px;
+    height: 70px;
 }
 
 #login_block {
@@ -91,7 +91,7 @@ a, a:visited, a:hover {
 }
 
 #frontend_menu .item {
-    float: left;
+    float: right;
     margin: 0px 28px;
 }
 
@@ -177,4 +177,77 @@ ul { list-style-type: none;}
 
 #footer .copyright{
   margin: 5px 0 5px 0;
+}
+
+.maint-content-top .video-conteiner {
+  float: left;
+  margin-right: 20px;
+  height: 440px;
+}
+
+.maint-content-top .video-conteiner  .video{
+  border: 1px dashed grey;
+  padding: 5px;
+}
+
+.maint-content-top .video-conteiner  .uero{
+  margin-top:20px;
+}
+
+.maint-content-top .news {
+  float:right;
+  width: 520px;
+}
+
+.maint-content-bottom {
+  width: 100%;
+}
+
+.maint-content-bottom .left {
+  float: left;
+  width: 450px;
+  margin-left: 25px;
+}
+
+.maint-content-bottom .right {
+  float: right;
+  width: 460px;
+  margin-right: 25px;
+}
+
+.maint-content-bottom .left .header {
+  font-size: 18px;
+  font-weight:bold;
+  margin:10px;
+  padding-left:10px;
+}
+
+.maint-content-bottom .left .item {
+  font-size: 14px;
+  margin: 10px;
+}
+
+.maint-content-bottom .right .header {
+  font-size: 18px;
+  font-weight:bold;
+  margin:10px;
+  padding-left:10px;
+}
+
+.maint-content-bottom .right .item {
+  font-size: 14px;
+  margin: 15px;
+}
+
+.maint-content-top .video-conteiner  .uero .header{
+  font-size: 18px;
+  font-weight:bold;
+  margin:10px;
+  padding-left:10px;
+}
+
+.maint-content-top .video-conteiner  .uero .item{
+  font-size: 14px;
+  margin: 15px;
+
 }

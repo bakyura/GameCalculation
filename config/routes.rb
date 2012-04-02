@@ -4,7 +4,7 @@ GamecalculationDemo::Application.routes.draw do
   devise_for :users, :path => "usuarios", :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification', :unlock => 'unblock', :registration => 'register', :sign_up => 'cmon_let_me_in' }
   devise_for :admins, :controllers => { :sessions => "admins/sessions" }
 
-  root :to => "home#news"
+  root :to => "home#main"
   
   match '/last_news',  :to => "home#news"
   match '/supported_leagues',  :to => "home#supported_leagues"
@@ -12,6 +12,7 @@ GamecalculationDemo::Application.routes.draw do
   match '/algoritms',  :to => "home#algoritms"
   match '/services',  :to => "home#services"
   match '/about',  :to => "home#about"
+  match '/bettings_strategy',  :to => "home#bettings_strategy"
   
   devise_scope :user do
     get "sign_in", :to => "devise/sessions#new"
@@ -62,6 +63,7 @@ GamecalculationDemo::Application.routes.draw do
   
   match 'football_matches', :to => 'football_matches#index'
   match 'football_matches/:id', :to => 'football_matches#details'
+  match 'predictions', :to => 'predictions#index'
   
   resources :football_clubs_admin do
     as_routes

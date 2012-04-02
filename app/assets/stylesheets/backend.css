@@ -66,6 +66,16 @@ h1 {
   font-size: 17px;
 }
 
+#backend_content .title .name_new {
+  padding: 20px 0px 0px 70px;
+  letter-spacing: 2px;
+}
+
+#backend_content .title .tour_new {
+  padding: 0px 0px 0px 70px;
+  font-size: 17px;
+}
+
 #backend_content #backend_wrapper{
   width:  960px;
 }
@@ -336,6 +346,11 @@ h1 {
 
 }
 
+.matche_det_new{
+  margin: 10px;
+
+}
+
 .matche_det_name {
   padding: 20px 0 0 10px;
 }
@@ -348,7 +363,19 @@ h1 {
   margin: 15px 0 0 10px;
 }
 
+.matche_det_new a, a:visited {
+  color: #BBB;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 15px 0 0 10px;
+}
+
 .matche_det a:visited {
+  color: #BBB;
+}
+
+.matche_det_new a:visited {
   color: #BBB;
 }
 
@@ -360,7 +387,19 @@ h1 {
   font-weight:bold;
 }
 
+.matche_det_new .vs {
+  width: 220px;
+  font-size:14px;
+  color: #BBB;
+  text-align: center;
+  font-weight:bold;
+}
+
 .matche_det .link_container {
+  margin: 10px 20px 20px 20px;
+}
+
+.matche_det_new .link_container {
   margin: 10px 20px 20px 20px;
 }
 
@@ -374,7 +413,17 @@ h1 {
   font-size: 20px;
 }
 
+.matche_det_new .teams_container {
+  margin: 20px;
+  font-size: 20px;
+}
+
 .matche_det a:hover {
+  color: grey;
+  text-decoration: underline;
+}
+
+.matche_det_new a:hover {
   color: grey;
   text-decoration: underline;
 }
@@ -476,9 +525,10 @@ h1 {
   margin-left: 50px;
 }
 
-.stat_info{
-  margin: 5px 0 0 20px;
+.stat_info_new {
+  margin: 20px 0 0 20px;
   font-size: 14px;
+  display: none;
 }
 
 .stat_info_item {
@@ -517,4 +567,42 @@ h1 {
 .stat .matche_info_item  b{
   font-size: 16px;
   color: #555;
+}
+
+.graphic_predictions  {
+  border: 1px solid grey;
+  float: left;
+  margin: 0 10px 0 10px;
+  font-size: 15px;
+}
+
+.graphic_predictions  .win_home{
+  float: left;
+  background-color: #FF3333;
+  padding: 3px 7px 3px 7px;
+}
+
+.graphic_predictions  .draw{
+  float: left;
+  background-color: #33CC33;
+  padding: 3px 7px 3px 7px;
+}
+
+.graphic_predictions  .win_quest{
+  background-color: #3399CC;
+  float: left;
+  padding: 3px 7px 3px 7px;
+}
+
+.teams_container .team_name{
+  float: left;
+}
+
+.matche_sub_info {
+  margin: 0px 0px 0px 20px;
+  font-size:14px;
+}
+
+.matche_sub_info  a{
+  font-size:14px;
 }
