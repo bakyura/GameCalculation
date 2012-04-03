@@ -28,31 +28,36 @@
           <img src="/images/logo.png" alt="bet assistant Alpha">
           <span class="logo_demo">alpha</span>
         </a>
+        
+        <div id="frontend_menu">
+          <div class="item">
+            <a href="/about">About</a>
+          </div>
+          <div class="item">
+            <%= link_to "Statistics", statistics_path %>
+          </div>
+          <div class="item">
+            <a href="/bettings_strategy">Bettings strategy</a>
+          </div>
+          <div class="item">
+            <a href="/predictions">Predictions</a>
+          </div>
+        </div>
+        
+        <!--
         <div id="login_block">
           <% if user_signed_in? %>
             Signed in as <b><%= link_to "#{current_user.email}", "/news", :class => "login" %></b>.
             <%= link_to "Log out", destroy_user_session_path, :method => :delete, :class => "login" %>
           <% else %>
-            <!-- <%= link_to "Sign up", new_user_registration_path, :class => "register" %> | --> <%= link_to "Log in", new_user_session_path, :class => "login" %>
+            <%= link_to "Sign up", new_user_registration_path, :class => "register" %> | <%= link_to "Log in", new_user_session_path, :class => "login" %>
           <% end %>
-        </div>
+        </div> -->
       </div>
+      
       <center>
-      <div id="frontend_menu">
-        <div class="item">
-          <a href="/about">About</a>
-        </div>
-        <div class="item">
-          <%= link_to "Statistics", statistics_path %>
-        </div>
-        <div class="item">
-          <a href="/bettings_strategy">Bettings strategy</a>
-        </div>
-        <div class="item">
-          <a href="/predictions">Predictions</a>
-        </div>
-      </div>
-      </center>
+          
+        </center>
 
     </div>
     <div id="backend_content">

@@ -33,13 +33,16 @@
         <% unless @prediction.nil? %>        
           <div class="graphic_predictions">
             <div class="win_home">
-              <%= @prediction.win_home %>%
+              <div class="win_home_in" style="height:2px; width:<%= Integer(@prediction.win_home)*2 %>px;"></div>
+              <div style="font-size: 12px;">Win <%= @prediction.win_home %>%</div>
             </div>
             <div class="draw">
-              <%= @prediction.draw_result %>%
+              <div class="draw_in" style="height:2px; width:<%= Integer(@prediction.draw_result)*2 %>px;"></div>
+              <div style="font-size: 12px;">Draw <%= @prediction.draw_result %>%</div>
             </div>
             <div class="win_quest">
-              <%= @prediction.win_quest %>%
+              <div class="win_quest_in" style="height:2px; width:<%= Integer(@prediction.win_quest)*2 %>px;"></div>
+              <div style="font-size: 12px;">Win <%= @prediction.win_quest %>%</div>
             </div>
             <div class="clear"></div>
           </div>

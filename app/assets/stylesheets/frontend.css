@@ -14,9 +14,17 @@ a, a:visited, a:hover {
     height: 56px;
     width: 960px;
     font-size: 45px;
-    padding: 15px 10px 10px 10px;
+    padding: 15px 10px 0 10px;
     text-align: left;
     border-bottom: 1px solid silver;
+}
+
+#logo_block  a{
+  border: none;
+}
+
+#logo_block  img{
+  border: none;
 }
 
 .logo_demo{
@@ -61,10 +69,11 @@ a, a:visited, a:hover {
 }
 
 #login_block {
-    float: right;
+    float: left;
     margin: 0px;
-	padding-top: 16px;
+	  padding-top: 16px;
     font-size: 15px;
+    width: 400px;
 }
 
 #login_block a.login {
@@ -84,10 +93,10 @@ a, a:visited, a:hover {
 }
 
 #frontend_menu {
-    width: 1000px;
+    width: 600px;
     height: 30px;
-    padding: 10px 0 0px 0px;
     margin-bottom: 30px;
+    float: right;
 }
 
 #frontend_menu .item {
@@ -182,7 +191,6 @@ ul { list-style-type: none;}
 .maint-content-top .video-conteiner {
   float: left;
   margin-right: 20px;
-  height: 440px;
 }
 
 .maint-content-top .video-conteiner  .video{
@@ -201,6 +209,7 @@ ul { list-style-type: none;}
 
 .maint-content-bottom {
   width: 100%;
+  margin-top: 20px;
 }
 
 .maint-content-bottom .left {
@@ -239,15 +248,7 @@ ul { list-style-type: none;}
   margin: 15px;
 }
 
-.maint-content-top .video-conteiner  .uero .header{
-  font-size: 18px;
-  font-weight:bold;
-  margin:10px;
-  padding-left:10px;
-}
-
-.maint-content-top .video-conteiner  .uero .item{
+.main_hint {
   font-size: 14px;
-  margin: 15px;
-
+  padding: 0 20px 20px 5px;
 }

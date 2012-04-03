@@ -1,12 +1,11 @@
 <div id="statistic">
   <h1><%= @league.name %></h1>
   <h2>Summary statistics</h2>
-  <div class="sum_stat_row">Match recomended matches score: <b>3/20</b>(15.00%)</div>
-  <div class="sum_stat_row">Match recomended matches result: <b>15/20</b>(75.00%)</div>
-  <div class="sum_stat_row">Match matches score: <b>9/126</b>(7.14%)</div>
-  <div class="sum_stat_row">Match matches result: <b>63/126</b>(50.00%)</div>
+  <!-- <div class="sum_stat_row">Match recomended matches score: <b>3/20</b>(15.00%)</div>  -->
+  <div class="sum_stat_row">Recomendent matches: <!--<b>15/20</b> --> <b>75.00%</b> </div>
+  <!-- <div class="sum_stat_row">Match matches score: <b>9/126</b>(7.14%)</div> -->
+  <!-- <div class="sum_stat_row">Match matches result: <b>63/126</b>(50.00%)</div> -->
   <br />
-  <h2>Detailed statistics</h2>
   <h2>Previous <%= @tour14 %> tour</h2>
   <% @matches14.each do |matche|%>
     <% @team1 = FootballClub.find_by_id matche.home_team %>
@@ -16,7 +15,6 @@
       <div class="stat_info_item_main">
       <% @prediction = Prediction.first(:conditions => {:game_id => matche.id}) %>
         <% unless @prediction.nil? %>
-          <b class="black">Our forecast for the game:</b><br />
           Win Team 1: <span class="stat_info_item_r1"><%= @prediction.win_home %>%</span><br />
           Draw: <span class="stat_info_item_rx"><%= @prediction.draw_result %>%</span><br />
           Win Team 2: <span class="stat_info_item_r2"><%= @prediction.win_quest %>%</span><br />
@@ -67,7 +65,6 @@
       <div class="stat_info_item_main">
       <% @prediction = Prediction.first(:conditions => {:game_id => matche.id}) %>
         <% unless @prediction.nil? %>
-          <b class="black">Our forecast for the game:</b><br />
           Win Team 1: <span class="stat_info_item_r1"><%= @prediction.win_home %>%</span><br />
           Draw: <span class="stat_info_item_rx"><%= @prediction.draw_result %>%</span><br />
           Win Team 2: <span class="stat_info_item_r2"><%= @prediction.win_quest %>%</span><br />
@@ -118,7 +115,6 @@
       <div class="stat_info_item_main">
       <% @prediction = Prediction.first(:conditions => {:game_id => matche.id}) %>
         <% unless @prediction.nil? %>
-          <b class="black">Our forecast for the game:</b><br />
           Win Team 1: <span class="stat_info_item_r1"><%= @prediction.win_home %>%</span><br />
           Draw: <span class="stat_info_item_rx"><%= @prediction.draw_result %>%</span><br />
           Win Team 2: <span class="stat_info_item_r2"><%= @prediction.win_quest %>%</span><br />
@@ -169,7 +165,6 @@
       <div class="stat_info_item_main">
       <% @prediction = Prediction.first(:conditions => {:game_id => matche.id}) %>
         <% unless @prediction.nil? %>
-          <b class="black">Our forecast for the game:</b><br />
           Win Team 1: <span class="stat_info_item_r1"><%= @prediction.win_home %>%</span><br />
           Draw: <span class="stat_info_item_rx"><%= @prediction.draw_result %>%</span><br />
           Win Team 2: <span class="stat_info_item_r2"><%= @prediction.win_quest %>%</span><br />
@@ -220,7 +215,6 @@
       <div class="stat_info_item_main">
       <% @prediction = Prediction.first(:conditions => {:game_id => matche.id}) %>
         <% unless @prediction.nil? %>
-          <b class="black">Our forecast for the game:</b><br />
           Win Team 1: <span class="stat_info_item_r1"><%= @prediction.win_home %>%</span><br />
           Draw: <span class="stat_info_item_rx"><%= @prediction.draw_result %>%</span><br />
           Win Team 2: <span class="stat_info_item_r2"><%= @prediction.win_quest %>%</span><br />
@@ -271,7 +265,6 @@
       <div class="stat_info_item_main">
       <% @prediction = Prediction.first(:conditions => {:game_id => matche.id}) %>
         <% unless @prediction.nil? %>
-          <b class="black">Our forecast for the game:</b><br />
           Win Team 1: <span class="stat_info_item_r1"><%= @prediction.win_home %>%</span><br />
           Draw: <span class="stat_info_item_rx"><%= @prediction.draw_result %>%</span><br />
           Win Team 2: <span class="stat_info_item_r2"><%= @prediction.win_quest %>%</span><br />
@@ -322,7 +315,6 @@
       <div class="stat_info_item_main">
       <% @prediction = Prediction.first(:conditions => {:game_id => matche.id}) %>
         <% unless @prediction.nil? %>
-          <b class="black">Our forecast for the game:</b><br />
           Win Team 1: <span class="stat_info_item_r1"><%= @prediction.win_home %>%</span><br />
           Draw: <span class="stat_info_item_rx"><%= @prediction.draw_result %>%</span><br />
           Win Team 2: <span class="stat_info_item_r2"><%= @prediction.win_quest %>%</span><br />
@@ -373,7 +365,6 @@
       <div class="stat_info_item_main">
       <% @prediction = Prediction.first(:conditions => {:game_id => matche.id}) %>
         <% unless @prediction.nil? %>
-          <b class="black">Our forecast for the game:</b><br />
           Win Team 1: <span class="stat_info_item_r1"><%= @prediction.win_home %>%</span><br />
           Draw: <span class="stat_info_item_rx"><%= @prediction.draw_result %>%</span><br />
           Win Team 2: <span class="stat_info_item_r2"><%= @prediction.win_quest %>%</span><br />
@@ -424,7 +415,6 @@
       <div class="stat_info_item_main">
       <% @prediction = Prediction.first(:conditions => {:game_id => matche.id}) %>
         <% unless @prediction.nil? %>
-          <b class="black">Our forecast for the game:</b><br />
           Win Team 1: <span class="stat_info_item_r1"><%= @prediction.win_home %>%</span><br />
           Draw: <span class="stat_info_item_rx"><%= @prediction.draw_result %>%</span><br />
           Win Team 2: <span class="stat_info_item_r2"><%= @prediction.win_quest %>%</span><br />
@@ -475,7 +465,6 @@
       <div class="stat_info_item_main">
       <% @prediction = Prediction.first(:conditions => {:game_id => matche.id}) %>
         <% unless @prediction.nil? %>
-          <b class="black">Our forecast for the game:</b><br />
           Win Team 1: <span class="stat_info_item_r1"><%= @prediction.win_home %>%</span><br />
           Draw: <span class="stat_info_item_rx"><%= @prediction.draw_result %>%</span><br />
           Win Team 2: <span class="stat_info_item_r2"><%= @prediction.win_quest %>%</span><br />
@@ -526,7 +515,6 @@
       <div class="stat_info_item_main">
       <% @prediction = Prediction.first(:conditions => {:game_id => matche.id}) %>
         <% unless @prediction.nil? %>
-          <b class="black">Our forecast for the game:</b><br />
           Win Team 1: <span class="stat_info_item_r1"><%= @prediction.win_home %>%</span><br />
           Draw: <span class="stat_info_item_rx"><%= @prediction.draw_result %>%</span><br />
           Win Team 2: <span class="stat_info_item_r2"><%= @prediction.win_quest %>%</span><br />
@@ -577,7 +565,6 @@
       <div class="stat_info_item_main">
       <% @prediction = Prediction.first(:conditions => {:game_id => matche.id}) %>
         <% unless @prediction.nil? %>
-          <b class="black">Our forecast for the game:</b><br />
           Win Team 1: <span class="stat_info_item_r1"><%= @prediction.win_home %>%</span><br />
           Draw: <span class="stat_info_item_rx"><%= @prediction.draw_result %>%</span><br />
           Win Team 2: <span class="stat_info_item_r2"><%= @prediction.win_quest %>%</span><br />
@@ -628,7 +615,6 @@
       <div class="stat_info_item_main">
       <% @prediction = Prediction.first(:conditions => {:game_id => matche.id}) %>
         <% unless @prediction.nil? %>
-          <b class="black">Our forecast for the game:</b><br />
           Win Team 1: <span class="stat_info_item_r1"><%= @prediction.win_home %>%</span><br />
           Draw: <span class="stat_info_item_rx"><%= @prediction.draw_result %>%</span><br />
           Win Team 2: <span class="stat_info_item_r2"><%= @prediction.win_quest %>%</span><br />
@@ -679,7 +665,6 @@
       <div class="stat_info_item_main">
       <% @prediction = Prediction.first(:conditions => {:game_id => matche.id}) %>
         <% unless @prediction.nil? %>
-          <b class="black">Our forecast for the game:</b><br />
           Win Team 1: <span class="stat_info_item_r1"><%= @prediction.win_home %>%</span><br />
           Draw: <span class="stat_info_item_rx"><%= @prediction.draw_result %>%</span><br />
           Win Team 2: <span class="stat_info_item_r2"><%= @prediction.win_quest %>%</span><br />
