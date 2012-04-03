@@ -353,6 +353,7 @@ h1 {
 
 .matche_det_name {
   padding: 20px 0 0 10px;
+  width: 350px;
 }
 
 .matche_det a, a:visited {
@@ -409,12 +410,12 @@ h1 {
 }
 
 .matche_det .teams_container {
-  margin: 20px;
+  margin: 0px 20px 0px 20px;
   font-size: 20px;
 }
 
 .matche_det_new .teams_container {
-  margin: 20px;
+  margin: 20px 20px 10px 20px;
   font-size: 20px;
 }
 
@@ -571,7 +572,7 @@ h1 {
 
 .graphic_predictions  {
   float: left;
-  margin: 2px 15px 0 15px;
+  margin: 0 15px 0 2px;
   font-size: 15px;
 }
 
@@ -607,6 +608,7 @@ h1 {
 
 .teams_container .team_name{
   float: left;
+  font-size: 12px;
 }
 
 .matche_sub_info {

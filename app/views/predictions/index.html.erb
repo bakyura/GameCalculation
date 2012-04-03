@@ -24,11 +24,18 @@
   <% @team2 = FootballClub.find_by_id matche.quest_team %>
   <div class="matche_det_new" style="height: auto;">
     <div class="matche_det_name">
-      <div class="f_left">
-        <%= image_tag "/images/#{@team1.logo}", :height => "50" %>
+      <div style="width:300px;">
+        <div class="f_left">
+          <%= image_tag "/images/#{@team1.logo}", :height => "50" %>
+          <div class="team_name"><%= @team1.name %></div>
+        </div>
+        <div class="f_right">
+          <%= image_tag "/images/#{@team2.logo}", :height => "50" %>
+          <div class="team_name"><%= @team2.name %></div>
+        </div>
       </div>
+      <div class="clear"></div>
       <div class="f_left teams_container">
-        <div class="team_name"><%= @team1.name %></div>
         <% @prediction = Prediction.first(:conditions => {:game_id => matche.id}) %>
         <% unless @prediction.nil? %>        
           <div class="graphic_predictions">
@@ -47,13 +54,9 @@
             <div class="clear"></div>
           </div>
         <% end %>
-        <div class="team_name"><%= @team2.name %></div>
       </div>
-      <div class="f_left">
-        <%= image_tag "/images/#{@team2.logo}", :height => "50" %>
-      </div>
+      <div class="clear"></div>
     </div>
-    <div class="clear"></div>
     <div class="matche_sub_info">
       Suggested score: <span class="stat_info_item_r1"><%= @prediction.goals_home %>:<%= @prediction.goals_quest %></span><br />
       <% if @prediction.is_recommended %>
