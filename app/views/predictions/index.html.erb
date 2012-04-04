@@ -7,6 +7,7 @@
     }
   }
 </script>
+<div class="center_column">
 <div class="title">
   <div class="f_left">
     <%= image_tag "/images/#{@league.logo}", :height => "80px", :alt => "#{@league.name}" %>
@@ -24,36 +25,36 @@
   <% @team2 = FootballClub.find_by_id matche.quest_team %>
   <div class="matche_det_new" style="height: auto;">
     <div class="matche_det_name">
-      <div style="width:300px;">
+      <div style="width:640px;">
         <div class="f_left">
           <%= image_tag "/images/#{@team1.logo}", :height => "50" %>
           <div class="team_name"><%= @team1.name %></div>
         </div>
-        <div class="f_right">
-          <%= image_tag "/images/#{@team2.logo}", :height => "50" %>
-          <div class="team_name"><%= @team2.name %></div>
-        </div>
-      </div>
-      <div class="clear"></div>
-      <div class="f_left teams_container">
+        <div class="f_left teams_container">
         <% @prediction = Prediction.first(:conditions => {:game_id => matche.id}) %>
         <% unless @prediction.nil? %>        
           <div class="graphic_predictions">
             <div class="win_home">
-              <div class="win_home_in" style="height:2px; width:<%= Integer(@prediction.win_home)*2 %>px;"></div>
-              <div style="font-size: 12px;">Win <%= @prediction.win_home %>%</div>
+              <div class="win_home_in" style="height:2px; width:<%= Integer(@prediction.win_home)*4 %>px;"></div>
+              <div style="font-size: 12px; padding-left:50px;"><%= @prediction.win_home %>%</div>
             </div>
             <div class="draw">
-              <div class="draw_in" style="height:2px; width:<%= Integer(@prediction.draw_result)*2 %>px;"></div>
-              <div style="font-size: 12px;">Draw <%= @prediction.draw_result %>%</div>
+              <div class="draw_in" style="height:2px; width:<%= Integer(@prediction.draw_result)*4 %>px;"></div>
+              <div style="font-size: 12px; padding-left:50px;"><%= @prediction.draw_result %>%</div>
             </div>
             <div class="win_quest">
-              <div class="win_quest_in" style="height:2px; width:<%= Integer(@prediction.win_quest)*2 %>px;"></div>
-              <div style="font-size: 12px;">Win <%= @prediction.win_quest %>%</div>
+              <div class="win_quest_in" style="height:2px; width:<%= Integer(@prediction.win_quest)*4 %>px;"></div>
+              <div style="font-size: 12px; padding-left:50px;"><%= @prediction.win_quest %>%</div>
             </div>
             <div class="clear"></div>
           </div>
         <% end %>
+      </div>
+        <div class="f_left">
+          <%= image_tag "/images/#{@team2.logo}", :height => "50" %>
+          <div class="team_name"><%= @team2.name %></div>
+        </div>
+        <div class="clear"></div>
       </div>
       <div class="clear"></div>
     </div>
@@ -62,9 +63,9 @@
       <% if @prediction.is_recommended %>
         <span class="stat_info_item_r2">We recommended this bet!</span><br />
       <% end %>
-      <span><a onClick="show_hide('<%= matche.id %>')">Compare result</a></span>
+      <br />
     </div>
-    <div id="game_<%= matche.id %>" class="stat_info_new">
+    <div class="stat_info">
       <div class="stat_info_item_main">
         <% @prediction = Prediction.first(:conditions => {:game_id => matche.id}) %>
         <div class="stat_info_item">
@@ -95,8 +96,77 @@
           <% end %>  
         </div>
         <div class="clear"></div>
+        <span><a onClick="show_hide('<%= matche.id %>')">Details</a></span>
       </div>
+    </div>
+    <div id="game_<%= matche.id %>" class="stat_info_new">
+    
+    
+    
+    <div class="matche_det" style="height: auto;">
+      <div class="matche_det_date">Date: <%= matche.game_date %></div>
+      <div id="matche_det_info_new">
+        <div class="matche_det_info_item">
+          <% @prediction = Prediction.first(:conditions => {:game_id => matche.id}) %>
+          <% unless @prediction.nil? %>
+            <% unless @prediction.comment.nil? %>
+              <br />
+              <b>More predictions:</b><br/>
+              <%== @prediction.comment %>
+            <% end %>
+          <% end %>
+        </div>
+        <br />
+        <br />
+        <div class="matche_det_info_item">
+          <b>Games history:</b><br/>
+          Coming soon
+        </div>
+        <br />
+        <br />
+        <%
+    
+          barometer = Barometer.new(@team1.location)
+          @weather = barometer.measure
+          @fame_day_weather = @weather.for(matche.game_date.to_date)
+          @fame_day_weather = @fame_day_weather.high.c unless @fame_day_weather.nil?
+        %>
+        <div class="matche_det_info_item">
+          <b>Weather forecast for <%= @team1.location %>:</b>
+          <div style="margin-left: 10px;">
+            Now: <%= @weather.current.temperature.c %>&deg; C<br />
+            Tomorrow: <%= @weather.tomorrow.low.c %>/<%= @weather.tomorrow.high.c %>&deg; C<br />
+            <% unless @game_day_weather.nil? %>
+              Game Day: <%= @game_day_weather %>&deg; C
+            <% end %>
+          </div>
+        </div>
+        <br />
+        <br />
+        <div class="matche_det_info_item">
+          <b>Latest news:</b><br />
+          Coming soon
+        </div>
+        <br />
+        <br />
+        <div class="matche_det_info_item">
+          <b>Text<span class="red">Live:</span></b><br />
+          Coming soon
+        </div>
+        <br />
+        <br />
+        <div class="matche_det_info_item">
+          <b>Video<span class="red">Live:</span></b><br />
+          Coming soon
+        </div>
+        <br />
+        <br />
+      </div>
+    
+    
+    
     </div>
   </div>
   <div class="clear"></div>
 <% end %>
+</div>

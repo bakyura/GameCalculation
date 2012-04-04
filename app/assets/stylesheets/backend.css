@@ -415,7 +415,7 @@ h1 {
 }
 
 .matche_det_new .teams_container {
-  margin: 5px 20px 10px 20px;
+  margin: 25px 0 30px 10px;
   font-size: 20px;
 }
 
@@ -431,6 +431,10 @@ h1 {
 
 #matche_det_info {
   margin: 20px 0 0 110px;
+}
+
+#matche_det_info_new {
+  margin: 20px 0 0 0;
 }
 
 .matche_det_info{
@@ -618,4 +622,18 @@ h1 {
 
 .matche_sub_info  a{
   font-size:14px;
+}
+
+.left_column {
+  float: left;
+  width: 500px;
+  margin-right:20px;
+}
+
+.right_column {
+  padding-top:35px;
+}
+
+.center_column {
+  margin-left: 150px;
 }
