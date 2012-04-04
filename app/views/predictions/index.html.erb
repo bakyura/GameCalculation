@@ -25,7 +25,7 @@
   <% @team2 = FootballClub.find_by_id matche.quest_team %>
   <div class="matche_det_new" style="height: auto;">
     <div class="matche_det_name">
-      <div style="width:640px;">
+      <div style="width:700px;">
         <div class="f_left">
           <%= image_tag "/images/#{@team1.logo}", :height => "50" %>
           <div class="team_name"><%= @team1.name %></div>
@@ -101,70 +101,67 @@
     </div>
     <div id="game_<%= matche.id %>" class="stat_info_new">
     
-    
-    
-    <div class="matche_det" style="height: auto;">
-      <div class="matche_det_date">Date: <%= matche.game_date %></div>
-      <div id="matche_det_info_new">
-        <div class="matche_det_info_item">
-          <% @prediction = Prediction.first(:conditions => {:game_id => matche.id}) %>
-          <% unless @prediction.nil? %>
-            <% unless @prediction.comment.nil? %>
-              <br />
-              <b>More predictions:</b><br/>
-              <%== @prediction.comment %>
-            <% end %>
-          <% end %>
-        </div>
-        <br />
-        <br />
-        <div class="matche_det_info_item">
-          <b>Games history:</b><br/>
-          Coming soon
-        </div>
-        <br />
-        <br />
-        <%
-    
-          barometer = Barometer.new(@team1.location)
-          @weather = barometer.measure
-          @fame_day_weather = @weather.for(matche.game_date.to_date)
-          @fame_day_weather = @fame_day_weather.high.c unless @fame_day_weather.nil?
-        %>
-        <div class="matche_det_info_item">
-          <b>Weather forecast for <%= @team1.location %>:</b>
-          <div style="margin-left: 10px;">
-            Now: <%= @weather.current.temperature.c %>&deg; C<br />
-            Tomorrow: <%= @weather.tomorrow.low.c %>/<%= @weather.tomorrow.high.c %>&deg; C<br />
-            <% unless @game_day_weather.nil? %>
-              Game Day: <%= @game_day_weather %>&deg; C
+      <div class="matche_det" style="height: auto;">
+        <div class="matche_det_date">Date: <%= matche.game_date %></div>
+        <div id="matche_det_info_new">
+          <div class="matche_det_info_item">
+            <% @prediction = Prediction.first(:conditions => {:game_id => matche.id}) %>
+            <% unless @prediction.nil? %>
+              <% unless @prediction.comment.nil? %>
+                <br />
+                <b>More predictions:</b><br/>
+                <%== @prediction.comment %>
+              <% end %>
             <% end %>
           </div>
+          <br />
+          <br />
+          <div class="matche_det_info_item">
+            <b>Games history:</b><br/>
+            Coming soon
+          </div>
+          <br />
+          <br />
+          <%
+    
+            barometer = Barometer.new(@team1.location)
+            @weather = barometer.measure
+            @fame_day_weather = @weather.for(matche.game_date.to_date)
+            @fame_day_weather = @fame_day_weather.high.c unless @fame_day_weather.nil?
+          %>
+          <div class="matche_det_info_item">
+            <b>Weather forecast for <%= @team1.location %>:</b>
+            <div style="margin-left: 10px;">
+              Now: <%= @weather.current.temperature.c %>&deg; C<br />
+              Tomorrow: <%= @weather.tomorrow.low.c %>/<%= @weather.tomorrow.high.c %>&deg; C<br />
+              <% unless @game_day_weather.nil? %>
+                Game Day: <%= @game_day_weather %>&deg; C
+              <% end %>
+            </div>
+          </div>
+          <br />
+          <br />
+          <div class="matche_det_info_item">
+            <b>Latest news:</b><br />
+            Coming soon
+          </div>
+          <br />
+          <br />
+          <div class="matche_det_info_item">
+            <b>Text<span class="red">Live:</span></b><br />
+            Coming soon
+          </div>
+          <br />
+          <br />
+          <div class="matche_det_info_item">
+            <b>Video<span class="red">Live:</span></b><br />
+            Coming soon
+          </div>
+          <br />
+          <br />
         </div>
-        <br />
-        <br />
-        <div class="matche_det_info_item">
-          <b>Latest news:</b><br />
-          Coming soon
-        </div>
-        <br />
-        <br />
-        <div class="matche_det_info_item">
-          <b>Text<span class="red">Live:</span></b><br />
-          Coming soon
-        </div>
-        <br />
-        <br />
-        <div class="matche_det_info_item">
-          <b>Video<span class="red">Live:</span></b><br />
-          Coming soon
-        </div>
-        <br />
-        <br />
+      
       </div>
-    
-    
-    
     </div>
   </div>
   <div class="clear"></div>
