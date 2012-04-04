@@ -25,8 +25,8 @@
   <% @team2 = FootballClub.find_by_id matche.quest_team %>
   <div class="matche_det_new" style="height: auto;">
     <div class="matche_det_name">
-      <div style="width:700px;">
-        <div class="f_left">
+      <div style="width:750px;">
+        <div class="f_left logo_with_name">
           <%= image_tag "/images/#{@team1.logo}", :height => "50" %>
           <div class="team_name"><%= @team1.name %></div>
         </div>
@@ -34,23 +34,23 @@
         <% @prediction = Prediction.first(:conditions => {:game_id => matche.id}) %>
         <% unless @prediction.nil? %>        
           <div class="graphic_predictions">
-            <div class="win_home">
-              <div class="win_home_in" style="height:2px; width:<%= Integer(@prediction.win_home)*4 %>px;"></div>
+            <div class="win_home" style="width: <%= Integer(@prediction.win_home) * 500 / 100 %>px;" >
+              <div class="win_home_in" style="height:5px;"></div>
               <div style="font-size: 12px; padding-left:50px;"><%= @prediction.win_home %>%</div>
             </div>
-            <div class="draw">
-              <div class="draw_in" style="height:2px; width:<%= Integer(@prediction.draw_result)*4 %>px;"></div>
+            <div class="draw"  style="width: <%= Integer(@prediction.draw_result) * 500 / 100 %>px;" >
+              <div class="draw_in" style="height:5px;"></div>
               <div style="font-size: 12px; padding-left:50px;"><%= @prediction.draw_result %>%</div>
             </div>
-            <div class="win_quest">
-              <div class="win_quest_in" style="height:2px; width:<%= Integer(@prediction.win_quest)*4 %>px;"></div>
+            <div class="win_quest" style="width: <%= Integer(@prediction.win_quest) * 500 / 100 %>px;" >
+              <div class="win_quest_in" style="height:5px;"></div>
               <div style="font-size: 12px; padding-left:50px;"><%= @prediction.win_quest %>%</div>
             </div>
             <div class="clear"></div>
           </div>
         <% end %>
       </div>
-        <div class="f_left">
+        <div class="f_left logo_with_name">
           <%= image_tag "/images/#{@team2.logo}", :height => "50" %>
           <div class="team_name"><%= @team2.name %></div>
         </div>

@@ -577,6 +577,7 @@ h1 {
   float: left;
   margin: 0 15px 0 2px;
   font-size: 15px;
+  width: 500px;
 }
 
 .graphic_predictions  .win_home{
@@ -592,20 +593,17 @@ h1 {
 }
 
 .graphic_predictions  .win_home_in{
-  border: 1px solid grey;
-  background-color: #FF3333;
+  background-color: #FF0000;
   padding: 3px 7px 3px 7px;
 }
 
 .graphic_predictions  .draw_in{
-  border: 1px solid grey;
-  background-color: #33CC33;
+  background-color: #00FF00;
   padding: 3px 7px 3px 7px;
 }
 
 .graphic_predictions  .win_quest_in{
-  border: 1px solid grey;
-  background-color: #3399CC;
+  background-color: #0000FF;
   padding: 3px 7px 3px 7px;
 }
 
@@ -634,5 +632,10 @@ h1 {
 }
 
 .center_column {
-  margin-left: 125px;
+  margin-left: 95px;
+}
+
+.logo_with_name {
+  width: 90px;
+  text-align: center;
 }
