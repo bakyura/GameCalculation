@@ -194,8 +194,6 @@ ul { list-style-type: none;}
 }
 
 .maint-content-top .video-conteiner  .video{
-  border: 1px dashed grey;
-  padding: 5px;
 }
 
 .maint-content-top .video-conteiner  .uero{
@@ -245,11 +243,28 @@ ul { list-style-type: none;}
 
 .maint-content-bottom .right .item {
   font-size: 14px;
-  margin: 15px;
+  margin: 10px;
 }
 
 .main_hint {
-  font-size: 16px;
+  font-size: 20px;
   padding: 0 30px 20px 10px;
-  text-align: center;
+  text-align: left;
+}
+
+.social_accounts_container {
+  margin: 0 0 0 300px;
+}
+
+.social_accounts {
+  border: grey 1px dashed;
+  padding: 5px 5px 5px 5px;
+  font-size: 20px;
+  width: 330px;
+  height: 30px;  
+}
+
+.social_accounts img {
+  height: 22px;
+  margin-top: 3px;
 }

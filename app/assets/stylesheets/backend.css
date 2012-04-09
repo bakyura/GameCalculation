@@ -593,17 +593,17 @@ h1 {
 }
 
 .graphic_predictions  .win_home_in{
-  background-color: #FF0000;
+  background-color: #CD5C5C;
   padding: 3px 7px 3px 7px;
 }
 
 .graphic_predictions  .draw_in{
-  background-color: #00FF00;
+  background-color: #2E8B57;
   padding: 3px 7px 3px 7px;
 }
 
 .graphic_predictions  .win_quest_in{
-  background-color: #0000FF;
+  background-color: #87CEFA;
   padding: 3px 7px 3px 7px;
 }
 
