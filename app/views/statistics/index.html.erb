@@ -9,6 +9,59 @@
 </script>
 <div id="statistic" class="left_column">
   <h1><%= @league.name %></h1>
+  <h2>Previous <%= @tour18 %> tour</h2>
+  <% @matches18.each do |matche|%>
+    <% @team1 = FootballClub.find_by_id matche.home_team %>
+    <% @team2 = FootballClub.find_by_id matche.quest_team %>
+    <h3><b class="black"><%= @team1.name %> - <%= @team2.name %> <%= matche.home_goals %> : <%= matche.quest_goals %></b></h3>
+    <div id="stat_info">
+      <div class="stat_info_item_main">
+      <% @prediction = Prediction.first(:conditions => {:game_id => matche.id}) %>
+        <% unless @prediction.nil? %>
+          Win Team 1: <span class="stat_info_item_r1"><%= @prediction.win_home %>%</span><br />
+          Draw: <span class="stat_info_item_rx"><%= @prediction.draw_result %>%</span><br />
+          Win Team 2: <span class="stat_info_item_r2"><%= @prediction.win_quest %>%</span><br />
+          Suggested score: <span class="stat_info_item_r1"><%= @prediction.goals_home %>:<%= @prediction.goals_quest %></span><br />
+          <% if @prediction.is_recommended %>
+            <span class="stat_info_item_r2">We recommended this match for bet!</span>
+          <% end %>
+          <% if @prediction.is_extreme_bet %>
+            <span class="stat_info_item_r1">Extreme bet!</span><br />
+          <% end %>
+        <% end %>
+      </div>
+      <div class="stat_info_item">
+      <% @prediction = BettingPrediction.first(:conditions => {:game_id => matche.id, :bookmaker_id => @will_hill.id}) %>
+        <% unless @prediction.nil? %>
+          <b class="black">WillHill</b><br />
+            Win Team 1: <span class="stat_info_item_r1"><%= @prediction.r_1 %></span><br />
+            Draw: <span class="stat_info_item_rx"><%= @prediction.r_x %></span><br />
+            Win Team 2: <span class="stat_info_item_r2"><%= @prediction.r_2 %></span><br />
+        <% end %>
+      </div>
+      <div class="stat_info_item">
+        <% @prediction = BettingPrediction.first(:conditions => {:game_id => matche.id, :bookmaker_id => @bet_365.id}) %>
+        <% unless @prediction.nil? %>
+          <b class="black">Bet365</b><br />
+          Win Team 1: <span class="stat_info_item_r1"><%= @prediction.r_1 %></span><br />
+          Draw: <span class="stat_info_item_rx"><%= @prediction.r_x %></span><br />
+          Win Team 2: <span class="stat_info_item_r2"><%= @prediction.r_2 %></span><br />
+        <% end%>
+      </div>
+      <div class="stat_info_item">
+        <% @prediction = BettingPrediction.first(:conditions => {:game_id => matche.id, :bookmaker_id => @unibet.id}) %>
+        <% unless @prediction.nil? %>
+          <b class="black">Unibet</b><br />
+          Win Team 1: <span class="stat_info_item_r1"><%= @prediction.r_1 %></span><br />
+          Draw: <span class="stat_info_item_rx"><%= @prediction.r_x %></span><br />
+          Win Team 2: <span class="stat_info_item_r2"><%= @prediction.r_2 %></span><br />
+        <% end %>  
+      </div>
+      <div class="clear"></div>
+    </div>
+  <% end %>
+  <br />
+  <br />
   <h2>Previous <%= @tour17 %> tour</h2>
   <% @matches17.each do |matche|%>
     <% @team1 = FootballClub.find_by_id matche.home_team %>
@@ -863,9 +916,9 @@
 </div>
 <div class="right_column">
   <h2>Statistics summary</h2>
-  <div class="sum_stat_row">Recomendent matches: <!--<b>18/25</b> --><b style="color: red; font-size: 18px;">72.00%</b> </div>
-  <div class="sum_stat_row">Match recomended matches score: <!-- <b>3/25</b> --><b>12.00%</b></div>
-  <div class="sum_stat_row">Match matches score: <!-- <b>9/153</b> --><b>5.88%</b></div>
-  <div class="sum_stat_row">Match matches result: <!-- <b>70/153</b>--><b>45.75%</b></div>
+  <div class="sum_stat_row">Recomendent matches: <!--<b>19/27</b> --><b style="color: red; font-size: 18px;">70.37%</b> </div>
+  <div class="sum_stat_row">Match recomended matches score: <!-- <b>3/27</b> --><b>11.11%</b></div>
+  <div class="sum_stat_row">Match matches score: <!-- <b>9/162</b> --><b>5.56%</b></div>
+  <div class="sum_stat_row">Match matches result: <!-- <b>72/162</b>--><b>44.44%</b></div>
   <br />
 </div>
