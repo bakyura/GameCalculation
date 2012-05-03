@@ -66,6 +66,9 @@
       <% if @prediction.is_extreme_bet %>
         <span class="stat_info_item_r1">Extreme bet!</span><br />
       <% end %>
+      <% if @prediction.is_double_bet %>
+        <span class="stat_info_item_r1" style="color:blue;">Double bet!</span><br />
+      <% end %>
       <br />
     </div>
     <div class="stat_info">

@@ -5,7 +5,7 @@ class PredictionsController < ApplicationController
   layout "frontend"
 
   def index
-    @tour = 33
+    @tour = 34
     @league = League.first(:conditions => {:country => 'DEU'})
     @matches = FootballMatch.find(:all, :conditions => { :tour => @tour, :league => @league.id})
     
