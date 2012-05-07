@@ -64,6 +64,7 @@ GamecalculationDemo::Application.routes.draw do
   match 'football_matches', :to => 'football_matches#index'
   match 'football_matches/:id', :to => 'football_matches#details'
   match 'predictions', :to => 'predictions#index'
+  match 'euro2012', :to => 'euro_championship#index'
   
   resources :football_clubs_admin do
     as_routes
